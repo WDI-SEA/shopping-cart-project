@@ -1,22 +1,15 @@
 document.addEventListener("DOMContenetLoaded", function() {
 
-    var cereal = {
-
-    }
-
-    var juices = {
-
-    }
-
-    var candy = {
-
-    }
-
-    var btn = document.getElementById('button')
-    btn.addEventListener(click ', function(event) {
-        console.log(event)
-    })
+    document.createElement to add items to UL shoppinglist.
 
 });
 
-//use document.createElement to add items to UL shoppinglist.
+
+
+
+
+//div id="button">click me</div>
+// var btn = document.getElementById('button')
+// btn.addEventListener(click ', function(event) {
+//     console.log(this)
+// })
