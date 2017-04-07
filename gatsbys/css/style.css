@@ -1,0 +1,151 @@
+/* ----------- BORDERS FOR REFERENCE ----------- */
+
+header {
+    border: 1px solid blue;
+}
+
+#brand {
+    border: 1px solid pink;
+}
+
+nav {
+    border: 1px solid pink;
+}
+
+.store {
+    border: 1px solid blue;
+}
+
+
+/*.landing {
+    border: 1px solid green;
+}*/
+
+.welcome {
+    border: 1px solid teal;
+}
+
+.categories {
+    border: 1px solid teal;
+}
+
+.hats,
+.bags,
+.prints,
+.etc {
+    border: 1px solid orange;
+}
+
+
+/*#shoppingCart {
+    border: 1px solid green;
+}
+*/
+
+#keepShopping,
+#itemsInCart {
+    border: 1px solid teal;
+}
+
+footer {
+    border: 1px solid blue;
+}
+
+
+/* ----------- BORDERS FOR REFERENCE ----------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ----------- HEADING STYLES ----------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+
+/* ----------- HEADER ----------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+
+/* ----------- PAGE ----------- */
+
+.store {
+    display: flex;
+}
+
+.landing {
+    width: 70%;
+    background-color: lightblue;
+}
+
+.all-categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cat {
+    width: 40%;
+}
+
+#shoppingCart {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: lightgrey;
+}
+
+#shoppingCart h3 {
+    height: 10%;
+}
+
+#itemsInCart {
+    height: 50%;
+}
+
+#keepShopping {
+    height: 40%;
+}
+
+
+/* ----------- PAGE ----------- */
+
+footer {
+    text-align: center;
+}
