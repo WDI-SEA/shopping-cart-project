@@ -1,1 +1,16 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.cereal,
+.liturature,
+.soup {
+    width: 45%;
+    /*height: */
+}
+
+img {
+    width: 100%;
+}
