@@ -1,1 +1,65 @@
+body {
+    /*background-color: pink;*/
+    font-family: 'Open Sans', sans-serif;
+}
 
+.center {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    /*height: 300px;*/
+}
+
+#store {
+    background-color: yellow;
+}
+
+#shoppingCart {
+    background-color: lightgrey;
+}
+
+section {
+    width: 50%;
+}
+
+header {
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    margin: 0;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.categoryButton {
+    font-size: 1.25em;
+    margin: .25em;
+    padding: 1em 2em;
+    color: white;
+    background-color: black;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.col-1-2 {
+    width: 48%;
+    margin: 1%;
+    display: inline-block;
+    height: 15em;
+}
+
+.hidden {
+    display: none;
+}
