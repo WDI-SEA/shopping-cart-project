@@ -1,1 +1,46 @@
+body {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1em;
+}
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+div#groceryitem {
+    width: 50%;
+}
+
+div#shoppinglist {
+    width: 50%;
+}
+
+img {
+    width: 20%;
+}
+
+footer {
+    border: 1px solid green;
+    text-align: center;
+}
