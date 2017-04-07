@@ -1,1 +1,30 @@
+body {
+    background-color: lightgrey;
+}
 
+section {}
+
+h1 {}
+
+h2 {}
+
+li {
+    display: inline;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.categories {
+    background-color: lightblue;
+    width: 66%;
+    display: inline-block;
+}
+
+.shoppingcart {
+    background-color: lightgreen;
+    width: 33%;
+    display: inline-block;
+}
