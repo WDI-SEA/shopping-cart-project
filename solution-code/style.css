@@ -1,1 +1,45 @@
+img {
+    width: 100%;
+}
 
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    justify-content: space-around;
+}
+
+#indica,
+#sativa,
+#para {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    height: 300px;
+    width: 200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.half {
+    width: 50%;
+}
+
+.hide {
+    display: none;
+}
