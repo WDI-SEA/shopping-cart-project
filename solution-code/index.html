@@ -9,45 +9,79 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
     <link rel="author" href="humans.txt">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
     <section class="flex categories">
-        <nav>
-            <ul id="category-nav">
-                <li>cereal</li>
-                <li>juices</li>
-                <li>candy</li>
-            </ul>
-        </nav>
+        <header>
+            <h1>Categories</h1>
+            <nav>
+                <ul id="category-nav">
+                    <li>Cereal</li>
+                    <li>Juices</li>
+                    <li>Candy</li>
+                </ul>
+            </nav>
+        </header>
         <div id="cereal-products" class="flex">
-            <div class="item"><img class="item-image" src="images/cereal/cheerios.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/cereal/crunch.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/cereal/fruit-loops.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/cereal/puffs.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/cereal/raisin-bran.jpg" alt=""></div>
+            <div class="item"><img class="item-image" src="images/cereal/cheerios.jpg" alt="">
+                <p>Cheerios</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/cereal/crunch.jpg" alt="">
+                <p>Crunch</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/cereal/fruit-loops.jpg" alt="">
+                <p>Fruit Loops</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/cereal/puffs.jpg" alt="">
+                <p>Puffs</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/cereal/raisin-bran.jpg" alt="">
+                <p>Raisin Bran</p>
+            </div>
         </div>
         <div id="juice-products" class="flex hidden">
-            <div class="item"><img class="item-image" src="images/juice/apple-juice.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/juice/carrot-juice.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/juice/grape-juice.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/juice/orange-juice.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/juice/tomato-juice.jpg" alt=""></div>
+            <div class="item"><img class="item-image" src="images/juice/apple-juice.jpg" alt="">
+                <p>Apple Juice</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/juice/carrot-juice.jpg" alt="">
+                <p>Carrot Juice</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/juice/grape-juice.jpeg" alt="">
+                <p>Grape Juice</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/juice/orange-juice.jpg" alt="">
+                <p>Orang Juice</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/juice/tomato-juice.jpg" alt="">
+                <p>Tomato Juice</p>
+            </div>
         </div>
         <div id="candy-products" class="flex hidden">
-            <div class="item"><img class="item-image" src="images/candy/kit-kat.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/candy/m&ms.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/candy/skittles.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/candy/snickers.jpg" alt=""></div>
-            <div class="item"><img class="item-image" src="images/candy/twix.jpg" alt=""></div>
+            <div class="item"><img class="item-image" src="images/candy/kit-kat.jpg" alt="">
+                <p>Kit Kat</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/candy/m&ms.jpg" alt="">
+                <p>M & M</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/candy/skittles.jpg" alt="">
+                <p>Skittles</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/candy/snickers.jpg" alt="">
+                <p>Snickers</p>
+            </div>
+            <div class="item"><img class="item-image" src="images/candy/twix.jpg" alt="">
+                <p>Twix</p>
+            </div>
         </div>
     </section>
     <section class="flex shoppingcart">
-        <h1>Shopping Cart</h1>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+        <h1>Shoppingcart</h1>
+        <ul class="shoppingcart-list">
+            <li id="shoppingcart-item">ManualTestItemOne</li>
+            <li id="shoppingcart-item">MaualTestItemTwo</li>
+            <li id="shoppingcart-item">ManualTestItemThree</li>
         </ul>
     </section>
 </body>
