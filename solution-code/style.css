@@ -1,1 +1,128 @@
+/*Ideal- media query for phone*/
 
+
+/*595 px width*/
+
+* {
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    margin-top: 0;
+    background-image: url("images/PortfolioTests-16.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    height: 20em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: auto;
+    padding-left: 0;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    text-shadow: 1px 1px 2px white;
+}
+
+nav ul {
+    border-bottom: 1px solid black;
+}
+
+nav ul li {
+    width: 25%;
+    height: 10em;
+    color: black;
+    justify-content: center;
+    font-weight: 800;
+}
+
+h1 {
+    padding-top: 3em;
+}
+
+footer {
+    background-color: grey;
+}
+
+img {
+    width: 100%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#category-flora {
+    background-image: url("images/flora/flora-1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#category-fauna {
+    background-image: url("images/fauna/fauna-5.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#category-insecta {
+    background-image: url("images/insecta/insecta-1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#category-start {}
+
+#category-section {
+    background-color: lightgrey;
+    width: 66%;
+}
+
+#cart-section {
+    background-color: grey;
+    width: 33%;
+}
+
+#cart {}
+
+.col-1-1 {
+    width: 100%;
+}
+
+.col-1-2 {
+    width: 45%;
+}
+
+.col-1-3 {
+    width: 30%;
+}
+
+.hidden {
+    display: none;
+}
