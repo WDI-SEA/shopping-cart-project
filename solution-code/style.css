@@ -1,16 +1,39 @@
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-.cereal,
-.liturature,
-.soup {
-    width: 45%;
-    /*height: */
-}
+    .cereal,
+    .liturature,
+    .soup {
+        width: 40%;
+        padding: 0 4%;
+        /*height: */
+    }
 
-img {
-    width: 100%;
-}
+    img {
+        width: 100%;
+    }
+
+    #navCategories {
+        width: 100%;
+        /*margin: 2em auto;
+*/
+        list-style: none;
+        display: flex;
+        color: yellow;
+        justify-content: space-around;
+        text-align: center;
+/*        padding: 0;
+*/
+    }
+
+    nav {
+        background-color: navy;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
