@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta name="description" content=""> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joanna's Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
@@ -17,79 +16,82 @@
             <header class="center">
                 <h1>Categories</h1>
                 <nav>
-                    <button class="categoryButton">Cereal</button>
-                    <button class="categoryButton">Juices</button>
-                    <button class="categoryButton">Candy</button>
+                    <button id="cerealButton" class="categoryButton">Cereal</button>
+                    <button id="juiceButton" class="categoryButton">Juice</button>
+                    <button id="candyButton" class="categoryButton">Candy</button>
                 </nav>
             </header>
-            <div class="cereal">
-                <nav class="products">
-                    <div class="col-1-2">
-                        Cheerios
-                    </div>
-                    <div class="col-1-2">
-                        Crunch
-                    </div>
-                    <div class="col-1-2">
-                        Fruit Loops
-                    </div>
-                    <div class="col-1-2">
-                        Puffs
-                    </div>
-                    <div class="col-1-2">
-                        Raisin Bran
-                    </div>
-                </nav>
-            </div>
-            <div class="cereal hidden">
-                <nav class="products">
-                    <div class="col-1-2">
-                        Cheerios
-                    </div>
-                    <div class="col-1-2">
-                        Crunch
-                    </div>
-                    <div class="col-1-2">
-                        Fruit Loops
-                    </div>
-                    <div class="col-1-2">
-                        Puffs
-                    </div>
-                    <div class="col-1-2">
-                        Raisin Bran
-                    </div>
-                </nav>
-            </div>
-            <div class="cereal hidden">
-                <nav class="products">
-                    <div class="col-1-2">
-                        Cheerios
-                    </div>
-                    <div class="col-1-2">
-                        Crunch
-                    </div>
-                    <div class="col-1-2">
-                        Fruit Loops
-                    </div>
-                    <div class="col-1-2">
-                        Puffs
-                    </div>
-                    <div class="col-1-2">
-                        Raisin Bran
-                    </div>
-                </nav>
-            </div>
+            <nav id="cereal" class="hidden">
+                <div class="col-1-2" data-name="Cheerios">
+                    <img src="images/cereal/cheerios.jpg" alt="Cheerios">
+                    <p class="center">Cheerios</p>
+                </div>
+                <div class="col-1-2" data-name="Crunch">
+                    <img src="images/cereal/crunch.jpg" alt="Crunch">
+                    <p class="center">Crunch</p>
+                </div>
+                <div class="col-1-2" data-name="Fruit Loops">
+                    <img src="images/cereal/fruit-loops.jpg" alt="Fruit Loops">
+                    <p class="center">Fruit Loops</p>
+                </div>
+                <div class="col-1-2" data-name="Puffs">
+                    <img src="images/cereal/puffs.jpg" alt="Puffs">
+                    <p class="center">Puffs</p>
+                </div>
+                <div class="col-1-2" data-name="Raisin Bran">
+                    <img src="images/cereal/raisin-bran.jpg" alt="Raisin Bran">
+                    <p class="center">Raisin Bran</p>
+                </div>
+            </nav>
+            <nav id="juice" class="hidden">
+                <div class="col-1-2" data-name="Apple Juice">
+                    <img src="images/juice/apple-juice.jpg" alt="Apple Juice">
+                    <p class="center">Apple Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Carrot Juice">
+                    <img src="images/juice/carrot-juice.jpg" alt="Carrot Juice">
+                    <p class="center">Carrot Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Grape Juice">
+                    <img src="images/juice/grape-juice.jpeg" alt="Grape Juice">
+                    <p class="center">Grape Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Orange Juice">
+                    <img src="images/juice/orange-juice.jpg" alt="Orange Juice">
+                    <p class="center">Orange Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Tomato Juice">
+                    <img src="images/juice/tomato-juice.jpg" alt="Tomato Juice">
+                    <p class="center">Tomato Juice</p>
+                </div>
+            </nav>
+            <nav id="candy" class="hidden">
+                <div class="col-1-2" data-name="Kit Kat">
+                    <img src="images/candy/kit-kat.jpg" alt="Kit Kat">
+                    <p class="center">Kit Kat</p>
+                </div>
+                <div class="col-1-2" data-name="M & Ms">
+                    <img src="images/candy/m&ms.jpg" alt="M & Ms">
+                    <p class="center">M &amp; Ms</p>
+                </div>
+                <div class="col-1-2" data-name="Skittles">
+                    <img src="images/candy/skittles.jpg" alt="Skittles">
+                    <p class="center">Skittles</p>
+                </div>
+                <div class="col-1-2" data-name="Snickers">
+                    <img src="images/candy/snickers.jpg" alt="Snickers">
+                    <p class="center">Snickers</p>
+                </div>
+                <div class="col-1-2" data-name="Twix">
+                    <img src="images/candy/twix.jpg" alt="Twix">
+                    <p class="center">Twix</p>
+                </div>
+            </nav>
         </section>
         <section id="shoppingCart">
             <h1 class="center">Shopping Cart</h1>
-            <ul>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
-                <li>Four</li>
+            <ul id="shoppingList" class="center">
             </ul>
-            <div>
-            </div>
         </section>
     </main>
 </body>
