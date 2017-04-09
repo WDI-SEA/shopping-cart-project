@@ -60,16 +60,18 @@ document.addEventListener("DOMContentLoaded", function() {
     //     document.getElementByID("cart").appendChild(shoppingListItem);
     // }
 
-    var addToCart = document.getElementById("pinkHat");
+    var addToCart = document.getElementById("pinkHat
+");
 
     addToCart.addEventListener('click', function() {
-        var itemToPurchase = document.getElementsByClassName("item-name").innerHTML;
-        var itemToPurchasePrice = document.getElementsByClassName("pink.Hatprice");
+
+        var itemToPurchase = document.getElementById("pinkHatName");
+        var itemToPurchasePrice = document.getElementById("pinkHatPrice");
 
         var allItemsInCart = document.getElementById("cart");
 
-        var shoppingListItem = document.createElement('li');
-        shoppingListItem.appendChild(document.createTextNode(itemToPurchasePrice));
+        var shoppingListItem = document.createElement("li");
+        shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " + itemToPurchasePrice.innerText));
 
         cart.appendChild(shoppingListItem);
 
