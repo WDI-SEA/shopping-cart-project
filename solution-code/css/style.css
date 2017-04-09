@@ -158,6 +158,17 @@ article {
     font-size: 1.5em;
 }
 
+input {
+    background-color: #22223B;
+    border: 2px ridge #4A4E69;
+    border-radius: 0.5em;
+    color: #FFFFFF;
+    padding: 0.5em;
+    font-family: inherit;
+    display: block;
+    margin: 0 auto;
+}
+
 
 /*
 

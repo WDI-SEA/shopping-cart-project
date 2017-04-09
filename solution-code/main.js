@@ -1,5 +1,5 @@
 var dog = {};
-
+var allDogPartsIds = [];
 
 // these two functions toggle the subcategories when the mouse enters, or leaves the element (and child elements)
 function displaySubCategories() {
@@ -35,24 +35,59 @@ function toggleItemsInCategory() {
 }
 
 // determines which category of items you clicked on and which trait you clicked on
-// then adds it to the dog object (if it hasn't been set)
-// if it has been set, simply updates
-// now i need to limit cart to only display 1 property, maybe work with variable and if statment on line 48
-
+// then if it hasn't been set, creates new element
+// if it has been set, simply updates current list item with new text
+// after all that, property is added to the dog object
 function clickOnItem() {
     var dogTrait = this.id;
     var dogPart = this.dataset.cat;
+    var currentCartList = document.querySelectorAll("#cart-items li");
+    var newInnerText = dogTrait + " " + dogPart;
+
+    if (!dog.hasOwnProperty(`${dogPart}`)) {
+        var newDogTraitInCart = document.createElement("li");
+        newDogTraitInCart.innerText = newInnerText;
+        var cartDisplay = document.getElementById("cart-items");
+        cartDisplay.appendChild(newDogTraitInCart);
+    } else {
+        for (var i = 0; i < currentCartList.length; i++) {
+            if (currentCartList[i].innerText.includes(dogPart)) {
+                currentCartList[i].innerText = newInnerText;
+            }
+        }
+    }
+
     dog[`${dogPart}`] = dogTrait;
-
-    var newDogTraitInCart = document.createElement("li");
-    var innerText = dogTrait + " " + dogPart;
-    newDogTraitInCart.innerText = innerText;
-
-    var cartDisplay = document.getElementById("cart-items");
-    cartDisplay.appendChild(newDogTraitInCart);
 }
 
+// sees if any of the body parts defined are missing from the created dog
+function checkForAllDogParts(dog, dogParts) {
+    var allPartsPresent = true;
+    for (var i = 0; i < dogParts.length; i++) {
+        if (!dog.hasOwnProperty(dogParts[i])) {
+            allPartsPresent = false;
+        }
+    }
+    return allPartsPresent;
+}
 
+// checks if you have all the parts of a dog so you can purchase it
+function clickToPurchase() {
+    var message = document.createElement("p");
+    var cart = document.querySelector(".cart");
+
+    if (!checkForAllDogParts(dog, allDogPartsIds)) {
+        message.innerText = "Your dog is missing a body part! Please review and add the right part!";
+    } else {
+        message.innerText = "Your dog has been purchased! We will send you updates about the status of your new companion!";
+    }
+
+    if (cart.querySelector("p")) {
+        document.querySelector(".cart p").innerText = message.innerText;
+    } else {
+        document.querySelector(".cart").appendChild(message);
+    }
+}
 
 function onLoad() {
     // variables to store the category menus
@@ -68,13 +103,21 @@ function onLoad() {
         allSubcategories[i].addEventListener("click", toggleItemsInCategory);
     }
 
+    // grabs all body parts as text (using ID) for later use
+
+
+    for (var i = 0; i < allSubcategories.length; i++) {
+        allDogPartsIds.push(allSubcategories[i].id);
+    }
+
     // adds "click on item" event to each dog trait available
-    // i should have made the above a for loop too
     var allDogTraits = document.querySelectorAll("article");
     for (var i = 0; i < allDogTraits.length; i++) {
         allDogTraits[i].addEventListener("click", clickOnItem);
     }
 
+    var submitButton = document.getElementById("buy-dog");
+    submitButton.addEventListener("click", clickToPurchase);
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);
