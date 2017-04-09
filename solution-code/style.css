@@ -58,6 +58,7 @@ main.flex-box {
     align-content: flex-start;
     background-color: grey;
     border-right: 5px inset;
+    overflow: auto
 }
 
 .product {

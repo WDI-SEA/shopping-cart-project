@@ -43,27 +43,53 @@ function changeCategory() {
 
 }
 
+var counter = {};
 
-function addToCart() {
-    var newLi = document.createElement('li');
-    newLi.innerHTML = this.getElementsByTagName('span')[0].innerHTML;
-    document.getElementById('cartList').appendChild(newLi)
+function printCart() {
+    cartList.innerHTML = "";
+    for (var item in counter) {
+        var newLi = document.createElement('li');
+        if (counter[item] == 1) {
+            newLi.innerHTML = item.toUpperCase();
+        } else {
+            newLi.innerHTML = item.toUpperCase() + " x" + counter[item];
+        }
+        document.getElementById('cartList').appendChild(newLi)
+
+    }
+};
+
+
+function addToCart(item) {
+    var itemName = item.classList[1];
+    if (counter[itemName] === undefined) {
+        counter[itemName] = 1;
+    } else {
+        counter[item.classList[1]] += 1;
+
+    }
+    printCart()
+}
+
+
+function addToTotal() {
     cartTotal += parseFloat(this.getAttribute('data-price'));
     document.getElementById('total').innerHTML = "Total: $" + cartTotal;
+    addToCart(this);
 };
 
 function clearCart() {
     var cartList = document.getElementById('cartList');
     cartList.innerHTML = "";
     document.getElementById('total').innerHTML = "Total:";
+    counter = {};
+    cartTotal = 0;
 
 }
 
 function search() {
     var input = searchBar.value.toLowerCase();
     var product = $('.product');
-    //document.getElementsByClassName('search category')[0].style.display = 'active';
-    //document.getElementsByClassName('Cereal')[0].style.display = 'none';
     product.addClass('hidden')
     if (input == "") {
         product.removeClass('hidden');
@@ -77,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cerealButton.addEventListener('click', changeCategory);
     juiceButton.addEventListener('click', changeCategory);
     candyButton.addEventListener('click', changeCategory);
-    $('.product').on('click', addToCart);
+    $('.product').on('click', addToTotal);
     clear.addEventListener('click', clearCart);
     searchBar.addEventListener('keyup', search);
 });
