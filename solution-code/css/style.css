@@ -147,10 +147,15 @@ article {
     background-color: #4A4E69;
 }
 
-.cart-items {
+#cart-items {
     margin: 1em;
     list-style-image: url("../images/dogemoji.png");
     display: inline-block;
+}
+
+#cart-items li {
+    margin: .5em;
+    font-size: 1.5em;
 }
 
 

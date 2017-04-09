@@ -37,14 +37,21 @@ function toggleItemsInCategory() {
 // determines which category of items you clicked on and which trait you clicked on
 // then adds it to the dog object (if it hasn't been set)
 // if it has been set, simply updates
+// now i need to limit cart to only display 1 property, maybe work with variable and if statment on line 48
 
 function clickOnItem() {
     var dogTrait = this.id;
     var dogPart = this.dataset.cat;
     dog[`${dogPart}`] = dogTrait;
+
+    var newDogTraitInCart = document.createElement("li");
+    var innerText = dogTrait + " " + dogPart;
+    newDogTraitInCart.innerText = innerText;
+
+    var cartDisplay = document.getElementById("cart-items");
+    cartDisplay.appendChild(newDogTraitInCart);
 }
 
-//access text to add to cart with .lastElementChild.innerText (event handler on article)
 
 
 function onLoad() {
@@ -56,37 +63,18 @@ function onLoad() {
     bodyMenu.addEventListener("mouseout", hideSubCategories);
 
     // adds display toggle to each subcategory button
-    var earsSubCatButton = document.getElementById("ears");
-    earsSubCatButton.addEventListener("click", toggleItemsInCategory);
-    var eyesSubCatButton = document.getElementById("eyes");
-    eyesSubCatButton.addEventListener("click", toggleItemsInCategory);
-    var headsSubCatButton = document.getElementById("heads");
-    headsSubCatButton.addEventListener("click", toggleItemsInCategory);
-    var bodiesSubCatButton = document.getElementById("bodies");
-    bodiesSubCatButton.addEventListener("click", toggleItemsInCategory);
-    var furSubCatButton = document.getElementById("fur");
-    furSubCatButton.addEventListener("click", toggleItemsInCategory);
-    var tailSubCatButton = document.getElementById("tail");
-    tailSubCatButton.addEventListener("click", toggleItemsInCategory);
+    var allSubcategories = document.querySelectorAll(".subcategory li");
+    for (var i = 0; i < allSubcategories.length; i++) {
+        allSubcategories[i].addEventListener("click", toggleItemsInCategory);
+    }
 
     // adds "click on item" event to each dog trait available
     // i should have made the above a for loop too
     var allDogTraits = document.querySelectorAll("article");
-
     for (var i = 0; i < allDogTraits.length; i++) {
         allDogTraits[i].addEventListener("click", clickOnItem);
     }
 
-
-
 }
-
-
-
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", onLoad);
