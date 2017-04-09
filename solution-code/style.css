@@ -6,6 +6,8 @@ body {
 section {}
 
 header {
+    margin: 0;
+    padding-top: 1em;
     text-align: center;
     background-color: black;
     color: white;
@@ -18,7 +20,6 @@ div {
 
 }
 h1 {
-    padding: 1em;
     font-size: 2em;
     font-weight: 700;
 }
@@ -28,11 +29,15 @@ li {
     display: inline;
     text-decoration: none;
 }
+a {
+    color: blue;
+}
 .item {
     width: 110px;
     height: 140px;
     margin: 10px 10px 10px 10px;
-    border: black, 2px;
+    border: black
+, 2px;
 }
 .item-image {
     width: 80%;
@@ -53,6 +58,10 @@ li {
     width: 33%;
     display: inline-block;
 }
+.shoppingcart-ul {}
+#shoppingcart-li {
+    color: red;
+}
 .hidden {
     display: none !important;
 }
@@ -60,9 +69,6 @@ li {
     padding: 1em;
     display: inline-block;
     justify-content: space-around;
-}
-#shoppingcart-item {
-    color: red;
 }
 #cereal-products {}
 #juice-products {}
