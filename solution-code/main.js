@@ -9,9 +9,10 @@ var catFauna = document.getElementById('category-fauna');
 var catInsecta = document.getElementById('category-insecta');
 
 
-function addToCart() {
+function addToCart(item) {
+    var addItem = item;
     var newItem = document.createElement('li');
-    newItem.innerText = (this.id);
+    newItem.innerText = (addItem);
     cart.appendChild(newItem);
 }
 
@@ -28,22 +29,30 @@ insecta.addEventListener('click', function() {
 })
 
 catFlora.addEventListener('click', function() {
-    console.log('clicked!');
-    flora.classList.remove('hidden');
-    fauna.classList.add('hidden');
-    insecta.classList.add('hidden');
+    changeCat(flora);
 })
 
 catFauna.addEventListener('click', function() {
-    console.log('clicked!');
-    fauna.classList.remove('hidden');
-    flora.classList.add('hidden');
-    insecta.classList.add('hidden');
+    changeCat(fauna);
 })
 
 catInsecta.addEventListener('click', function() {
-    console.log('clicked!');
-    insecta.classList.remove('hidden');
-    fauna.classList.add('hidden');
-    flora.classList.add('hidden');
+    changeCat(insecta);
 })
+
+function changeCat(category) {
+    var active = category
+    if (active == flora) {
+        flora.classList.remove('hidden');
+        fauna.classList.add('hidden');
+        insecta.classList.add('hidden');
+    } else if (active == fauna) {
+        fauna.classList.remove('hidden');
+        flora.classList.add('hidden');
+        insecta.classList.add('hidden');
+    } else if (active == insecta) {
+        insecta.classList.remove('hidden');
+        fauna.classList.add('hidden');
+        flora.classList.add('hidden');
+    }
+}

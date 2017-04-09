@@ -109,7 +109,9 @@ img {
     width: 33%;
 }
 
-#cart {}
+#cart li {
+    width: 100%;
+}
 
 .col-1-1 {
     width: 100%;
