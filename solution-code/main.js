@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     var lis = document.querySelectorAll("#category-nav li");
-    lis[2].addEventListener("click", function() {
+    lis.addEventListener("click", function() {
         console.log("click")
         console.log(this.innerText)
         var HiddenElement = document.hidden;
@@ -31,50 +31,64 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    //function to append .item  on click shoppingcart.ul> on 'click' using this.item
+    //function to append .item  on click shoppingcart.ul> on 'click' --- add the eventListener to all div with class item, so the entire div is the target
     //could div item be pushed from an array rather than divs?  (e.g. arrayToList)
 
-    var item = document.querySelectorAll(".item");
-    item.addEventListener("click", function() {
-            console.log("This item click.");
-            var shoppingcartLi = document.createElement("li");
-            shoppingcartLi.setAttribute("id", "#shoppingcart-li");
-            shoppingcartLi.innerText = "This product";
-            var shoppingcartUl = document.getElementById("shoppingcart-ul");
-            shoppingcartUl.appendChild(this.shoppingcartLi);
-        )
-    };
 
 
+    var divItemToShoppingcart = document.querySelector(".item");
+    divItemToShoppingcart.addEventListener("click", function() {
+        console.log("Item click.");
+        var shoppingcartLi = document.createElement("li");
+        shoppingcartLi.innerText = (this.item) //or this.divItemToShoppingcart
 
-    // var shoppingcartUl = document.querySelectorAll(".shoppingcart-ul");
-    // var shoppingcartLi = document.createElement("#shoppingcart-li");
+        var shoppingcartUl = document.getElementById("shoppingcart-ul");
+        shoppingcartUl.appendChild(shoppingcartLi);
+    });
 
-    //function to remove #shoppingcart-item from li
-    var shoppingcartLi = document.querySelectorAll(".#shoppingcart-item li");
-    shoppingcarItem[i].onclick = function() {
-        //this.parentNode.removeChild(this);
-        this.remove();
-    }
+    // var itemDiv = document.getElementsByClass(".item");
+    // itemDiv[i].addEventListener("click", function() {
+    //         console.log("This itemDivs click.");
+    //         for (i = 0; i <= lis.length; i++);
+    //         var shoppingcartLi = document.createElement("li");
+    //         shoppingcartLi.setAttribute("id", "#shoppingcart-li");
+    //         shoppingcartLi.innerText = "this.shoppingcartLi";
+    //         var shoppingcartUl = document.getElementById("shoppingcart-ul");
+    //         shoppingcartUl.appendChild(this.shoppingcartLi);
 
-    //addEventListen 2px border around each div .item on mouseover
+    //         var shoppingcartUl = document.querySelectorAll(".shoppingcart-ul");
+    //         var shoppingcartLi = document.createElement("#shoppingcart-li");
 
-    function displayItemBorder() {
-        document.querySelector('.item').style.border = 'blue';
-    }
+    //         shoppingcartLi[i].onclick = function() {
+    //             for (i = 0; i <= shoppingcartLi.length; i++);
+    //             this.remove();
 
-    function hideItemBorder() {
-        document.querySelector('.item').style.border = 'grey';
-    }
-    var div = document.querySelector('div');
-    div.addEventListener('mouseover', displayItemBorder);
-    div.addEventListener('mouseout', hideItemBorder);
+    //         });
 
 
 
 
 
-});
+
+})
+
+//addEventListen 2px border around each div .item on mouseover
+
+// function displayItemBorder() {
+//     document.querySelector('.item').style.border = 'blue';
+// }
+
+// function hideItemBorder() {
+//     document.querySelector('.item').style.border = 'grey';
+// }
+// var div = document.querySelector('div');
+// div.addEventListener('mouseover', displayItemBorder);
+// div.addEventListener('mouseout', hideItemBorder);
+
+
+
+
+
 
 
 
@@ -128,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function() {
 // var emailInputField = document.getElementById('email');
 // emailInputField.addEventListener('blur', checkEmailInput);
 // function checkEmailInput () {
-// 	if (emailInputField.value.length === 0) {
-// 		document.getElementById('message').innerText = 'Please enter an email address.'
-// 		emailInputField.className = 'error';	
-// 	} else {
-// 		document.getElementById('message').innerText = '';
-// 		emailInputField.className = '';
-// 	}
+//  if (emailInputField.value.length === 0) {
+//      document.getElementById('message').innerText = 'Please enter an email address.'
+//      emailInputField.className = 'error';    
+//  } else {
+//      document.getElementById('message').innerText = '';
+//      emailInputField.className = '';
+//  }
 // }
 
 
