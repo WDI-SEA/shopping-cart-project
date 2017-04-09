@@ -1,58 +1,43 @@
 // MVP-click events for categories,display html products and hide other divs using add/remove class,doument load
-// Ideal- generate products directly.
-var flora = document.getElementById('flora');
-var fauna = document.getElementById('fauna');
-var insecta = document.getElementById('insecta');
+// var flora = document.getElementById('flora');
+// var fauna = document.getElementById('fauna');
+// var insecta = document.getElementById('insecta');
 var cart = document.getElementById('cart');
-var catFlora = document.getElementById('category-flora');
-var catFauna = document.getElementById('category-fauna');
-var catInsecta = document.getElementById('category-insecta');
+// var catFlora = document.getElementById('category-flora');
+// var catFauna = document.getElementById('category-fauna');
+// var catInsecta = document.getElementById('category-insecta');
+var productList = document.querySelectorAll('.products');
+var categoryList = document.querySelectorAll('.category');
+var categoryNav = document.querySelectorAll('.cat-nav');
 
-
-function addToCart(item) {
-    var addItem = item;
-    var newItem = document.createElement('li');
-    newItem.innerText = (addItem);
-    cart.appendChild(newItem);
+for (var i = 0; i < productList.length; i++) {
+    productList[i].addEventListener('click', addToCart);
 }
 
-flora.addEventListener('click', function() {
-    addToCart();
-})
+for (var i = 0; i < categoryNav.length; i++) {
+    categoryNav[i].addEventListener('click', changeCat);
+}
 
-fauna.addEventListener('click', function() {
-    addToCart();
-})
 
-insecta.addEventListener('click', function() {
-    addToCart();
-})
+function addToCart() {
+    // var addItem = item;
+    var newItem = document.createElement('li');
+    newItem.innerText = (this.id);
+    cart.appendChild(newItem);
+    newItem.addEventListener('click', removeFromCart)
+}
 
-catFlora.addEventListener('click', function() {
-    changeCat(flora);
-})
+function removeFromCart() {
+    this.classList.add('hidden');
+}
 
-catFauna.addEventListener('click', function() {
-    changeCat(fauna);
-})
 
-catInsecta.addEventListener('click', function() {
-    changeCat(insecta);
-})
 
-function changeCat(category) {
-    var active = category
-    if (active == flora) {
-        flora.classList.remove('hidden');
-        fauna.classList.add('hidden');
-        insecta.classList.add('hidden');
-    } else if (active == fauna) {
-        fauna.classList.remove('hidden');
-        flora.classList.add('hidden');
-        insecta.classList.add('hidden');
-    } else if (active == insecta) {
-        insecta.classList.remove('hidden');
-        fauna.classList.add('hidden');
-        flora.classList.add('hidden');
+function changeCat() {
+    var referral = this;
+    for (var i = 0; i < categoryList.length; i++) {
+        categoryList[i].classList.add('hidden');
+        console.log(this.id);
+        // now to unhide the active one
     }
 }
