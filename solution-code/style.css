@@ -27,10 +27,6 @@ li {
     justify-content: space-between;
 }
 
-li span {
-    margin-right: 15px;
-}
-
 header {
     background-color: black;
     color: white;

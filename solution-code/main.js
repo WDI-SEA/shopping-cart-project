@@ -1,3 +1,5 @@
+var total = 0;
+
 function shopItem(name, price, counter, image, category) {
     this.counter = counter;
 
@@ -27,9 +29,14 @@ function shopItem(name, price, counter, image, category) {
             liCreator.appendChild(itemName);
             liCreator.appendChild(itemPrice);
             document.querySelector('ul').appendChild(liCreator);
+            total += price;
+            document.getElementById('total').innerHTML = `Total:  $${total}.00`;
+            document.getElementById('total').classList.remove('hide');
             counter += 1;
         } else if (counter > 1) {
             var priceMultiplied = document.getElementById(name);
+            total += price;
+            document.getElementById('total').innerHTML = `Total:  $${total}.00`;
             var multiplyer = price * counter;
             priceMultiplied.innerHTML = `$${multiplyer}.00`;
             counter += 1;
@@ -63,15 +70,6 @@ function onLoad() {
     var popeye = new shopItem('The Popeye', 45, 1, 'images/para/popeye-pipe.jpg', 'para');
     var rawPapers = new shopItem('Raw Rolling Papers', 2, 1, 'images/para/raw-papers.jpg', 'para');
     var zigZags = new shopItem('Zig Zags', 2, 1, 'images/para/zig-zag-papers.jpg', 'para');
-
-    var boxArray = document.getElementsByClassName('box');
-    for (i = 0; i < boxArray.length; i++) {
-        boxArray[i].addEventListener('click', function() {
-            if (this.counter > 0) {
-
-            }
-        });
-    }
 
     hideCategory('sativa-btn', 'sativa', 'indica', 'para');
     hideCategory('indica-btn', 'indica', 'sativa', 'para');
