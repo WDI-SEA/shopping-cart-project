@@ -47,35 +47,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // hover on item > add to cart image fades and button pops up "Add to Cart"
-    // item name and price are added to shopping cart list on thttp://literature.stackexchange.com/questions/2279/how-did-the-man-going-from-coming-to-st-ives-have-seven-wiveshe left side of screen.
+    // item name and price are added to shopping cart list
 
-    // var addToShoppingList = document.getElementById("pinkHat");
+    // var addToCart = document.getElementsByClassName("item");
+    addToCart = document.querySelectorAll('.item');
 
-    // function addItemToCart() {
-    //     var shoppingListItem = document.createElement("li");
-    //     var itemForList = document.getElementById("pinkHatAdd");
-    //     shoppingListItem.innerHTML = pinkHat.value;
-    //     pinkHat.value = "";
+    for (var i = 0; i <= addToCart.length; i++) {
 
-    //     document.getElementByID("cart").appendChild(shoppingListItem);
-    // }
+        addToCart[i].addEventListener('click', function() {
 
-    var addToCart = document.getElementById("pinkHat
-");
+            var itemToPurchase = document.getElementsByClassName("item-name");
+            var itemToPurchasePrice = document.getElementsByClassName("price");
 
-    addToCart.addEventListener('click', function() {
+            var allItemsInCart = document.getElementById("cart");
 
-        var itemToPurchase = document.getElementById("pinkHatName");
-        var itemToPurchasePrice = document.getElementById("pinkHatPrice");
+            var shoppingListItem = document.createElement("li");
+            shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " + itemToPurchasePrice.innerText));
 
-        var allItemsInCart = document.getElementById("cart");
+            cart.appendChild(shoppingListItem);
 
-        var shoppingListItem = document.createElement("li");
-        shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " + itemToPurchasePrice.innerText));
+        });
 
-        cart.appendChild(shoppingListItem);
-
-    });
+    }
 
     // shopping list: need button to delete items
 

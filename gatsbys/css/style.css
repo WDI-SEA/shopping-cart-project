@@ -225,6 +225,11 @@ header {
     background-color: #FFF;
 }
 
+.checkout-button:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
 #keepShopping {
     height: 40%;
     margin-top: 2em;
