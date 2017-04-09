@@ -1,6 +1,7 @@
 /* ----------- BORDERS FOR REFERENCE ----------- */
 
-header {
+
+/*header {
     border: 1px solid blue;
 }
 
@@ -16,10 +17,9 @@ nav {
     border: 1px solid blue;
 }
 
-
-/*.landing {
+.landing {
     border: 1px solid green;
-}*/
+}
 
 .welcome {
     border: 1px solid teal;
@@ -36,11 +36,9 @@ nav {
     border: 1px solid orange;
 }
 
-
-/*#shoppingCart {
+#shoppingCart {
     border: 1px solid green;
 }
-*/
 
 #keepShopping,
 #itemsInCart {
@@ -49,7 +47,7 @@ nav {
 
 footer {
     border: 1px solid blue;
-}
+}*/
 
 
 /* ----------- BORDERS FOR REFERENCE ----------- */
@@ -57,10 +55,17 @@ footer {
 body {
     display: flex;
     flex-direction: column;
+    background-color: #FCFAF9;
+    color: #171C28;
 }
 
 a {
     text-decoration: none;
+    color: #204675;
+}
+
+a:hover {
+    color: #FCFAF9;
 }
 
 
@@ -70,9 +75,35 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
     text-align: center;
+    font-family: "Forum", cursive;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: -10px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 20px;
+    font-family: "Fira Sans", sans-serif;
+    margin: 10px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
 }
 
 
@@ -92,60 +123,180 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: .3em;
-    padding-bottom: .3em;
+    padding-top: 1.4em;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    background-color: #000;
+    height: 40px;
+}
+
+.top-navigation a {
+    color: white;
+    font-size: 20px;
 }
 
 
-/* ----------- PAGE ----------- */
+/* ----------- HOME PAGE ----------- */
 
 .store {
     display: flex;
+    flex-direction: row;
 }
 
-.landing {
-    width: 70%;
-    background-color: lightblue;
+#landing {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.all-categories {
+#homepage {
     display: flex;
     flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
+.welcome {
+    padding: 4%;
+    font-size: 20px;
+    font-family: "Forum", cursive;
+    line-height: 25px;
 }
 
 .categories {
     display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .cat {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    max-width: 300px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.cat-img {
+    width: 100%;
+}
+
+
+/* ----------- SHOPPING CART ----------- */
 
 #shoppingCart {
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color: lightgrey;
+    background-color: #EAEAEA;
+    height: 100%;
 }
 
 #shoppingCart h3 {
-    height: 10%;
+    height: 2%;
+    margin-top: 2em;
 }
 
 #itemsInCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 50%;
+    align-self: center;
+    width: 90%;
+    border-bottom: 2px solid white;
+}
+
+.checkout-button {
+    width: 90%;
+    border-style: none;
+    background-color: transparent;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background-color: #FFF;
 }
 
 #keepShopping {
     height: 40%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+ul {
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: .1em;
+    padding-left: 0;
+    font-size: 14px;
 }
 
 
-/* ----------- PAGE ----------- */
+/* ----------- CATEGORY PAGES ----------- */
+
+.category-page {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+    font-family: "Fira Sans", sans-serif;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ----------- FOOTER ----------- */
 
 footer {
     text-align: center;
+    background-color: #000;
+    color: #FFF;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+
+/* ----------- HIDING ----------- */
+
+.hidden {
+    display: none !important;
 }
