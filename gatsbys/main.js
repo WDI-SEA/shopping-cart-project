@@ -49,19 +49,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // hover on item > add to cart image fades and button pops up "Add to Cart"
     // item name and price are added to shopping cart list
 
-    // var addToCart = document.getElementsByClassName("item");
-    addToCart = document.querySelectorAll('.item');
+    var addToCart = document.querySelectorAll('.item');
 
-    for (var i = 0; i <= addToCart.length; i++) {
+    for (var i = 0; i < addToCart.length; i++) {
 
         addToCart[i].addEventListener('click', function() {
 
-            var itemToPurchase = document.getElementsByClassName("item-name");
-            var itemToPurchasePrice = document.getElementsByClassName("price");
+            var itemToPurchase = this.querySelector('.itemname');
+            var itemToPurchasePrice = this.querySelector('.price');
 
             var allItemsInCart = document.getElementById("cart");
-
             var shoppingListItem = document.createElement("li");
+
             shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " + itemToPurchasePrice.innerText));
 
             cart.appendChild(shoppingListItem);
