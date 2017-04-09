@@ -5,20 +5,34 @@ img {
 a {
     text-decoration: none;
     color: white;
+    font-size: 2em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: 'Cardo', sans-serif;
 }
 
 h3 {
     margin: 0;
+    font-family: 'Cardo', sans-serif;
+}
+
+span {
+    font-family: 'Cardo', sans-serif;
 }
 
 body {
     text-align: center;
-    font-family: 'Passion One', sans-serif;
 }
 
 ul {
     list-style: none;
-    max-width: 60%;
+    max-width: 90%;
+    padding: 0;
+    margin: 0 auto 1em auto;
+}
+
+ul span {
+    margin-right: 20px;
 }
 
 li {
@@ -27,26 +41,51 @@ li {
     justify-content: space-between;
 }
 
-header {
-    background-color: black;
-    color: white;
-    margin-bottom: 1em;
+.header-img {
+    background-image: url('images/oscar.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+}
+
+.header-img img {
+    vertical-align: top;
+    width: 100%;
+    opacity: 0;
+    max-height: 450px;
+}
+
+.header-img > .titles {
+    position: absolute;
+    width: 100%;
 }
 
 header h1 {
+    text-align: left;
+    margin-left: 1em;
     padding-top: 1em;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 3em;
+    font-size: 7em;
+    letter-spacing: 5px;
+    font-family: 'Passion One', sans-serif;
 }
 
 header h2 {
+    text-align: left;
+    margin-left: 4em;
     margin-top: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: 'Cardo', sans-serif;
 }
 
 nav {
+    background-color: black;
     justify-content: space-around;
-    padding-bottom: .5em;
+    margin-bottom: 3em;
 }
 
 #indica,
@@ -54,6 +93,23 @@ nav {
 #para {
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 6em;
+}
+
+#store {
+    flex-direction: column;
+    width: 100%;
+}
+
+#cart {
+    width: 40%;
+}
+
+#cart h2 {
+    margin-bottom: 1em;
+    margin-top: 4em;
+    font-size: 3em;
+    font-family: 'Passion One', sans-serif;
 }
 
 .box {

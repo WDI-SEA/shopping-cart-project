@@ -20,23 +20,32 @@ function shopItem(name, price, counter, image, category) {
 
     boxCreator.addEventListener('click', function() {
         if (counter <= 1) {
+            document.getElementById('cart').classList.remove('hide');
             var liCreator = document.createElement('li');
             var itemName = document.createElement('span');
             itemName.innerHTML = name;
+            var itemQuantity = document.createElement('span');
+            itemQuantity.setAttribute('id', name + '1');
+            itemQuantity.innerHTML = counter;
+            var nameAndQuantity = document.createElement('div');
+            nameAndQuantity.appendChild(itemQuantity);
+            nameAndQuantity.appendChild(itemName);
             var itemPrice = document.createElement('span');
             itemPrice.setAttribute('id', name);
             itemPrice.innerHTML = `$${price}.00`;
-            liCreator.appendChild(itemName);
+            liCreator.appendChild(nameAndQuantity);
             liCreator.appendChild(itemPrice);
             document.querySelector('ul').appendChild(liCreator);
             total += price;
-            document.getElementById('total').innerHTML = `Total:  $${total}.00`;
+            document.getElementById('total').innerHTML = `Total: $${total}.00`;
             document.getElementById('total').classList.remove('hide');
             counter += 1;
         } else if (counter > 1) {
+            var itemCount = document.getElementById(name + '1');
+            itemCount.innerHTML = counter;
             var priceMultiplied = document.getElementById(name);
             total += price;
-            document.getElementById('total').innerHTML = `Total:  $${total}.00`;
+            document.getElementById('total').innerHTML = `Total: $${total}.00`;
             var multiplyer = price * counter;
             priceMultiplied.innerHTML = `$${multiplyer}.00`;
             counter += 1;
