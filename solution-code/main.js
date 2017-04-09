@@ -11,11 +11,19 @@ var catInsecta = document.getElementById('category-insecta');
 
 function addToCart() {
     var newItem = document.createElement('li');
-    newItem.innerText = ('item')
+    newItem.innerText = (this.id);
     cart.appendChild(newItem);
 }
 
 flora.addEventListener('click', function() {
+    addToCart();
+})
+
+fauna.addEventListener('click', function() {
+    addToCart();
+})
+
+insecta.addEventListener('click', function() {
     addToCart();
 })
 
