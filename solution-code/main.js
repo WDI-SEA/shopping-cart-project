@@ -6,7 +6,6 @@ var candyButton = document.getElementById('candyButton');
 var cereals = document.getElementsByClassName('Cereal')[0];
 var juices = document.getElementsByClassName('Juices')[0];
 var candies = document.getElementsByClassName('Candy')[0];
-
 var clearButton = document.getElementById('clear');
 var searchBar = document.getElementsByClassName('search')[0];
 
@@ -61,11 +60,11 @@ function printCart() {
 
 
 function addToCart(item) {
-    var itemName = item.classList[1];
+    var itemName = item.getAttribute('data-name');
     if (counter[itemName] === undefined) {
         counter[itemName] = 1;
     } else {
-        counter[item.classList[1]] += 1;
+        counter[itemName] += 1;
 
     }
     printCart()
@@ -90,12 +89,14 @@ function clearCart() {
 function search() {
     var input = searchBar.value.toLowerCase();
     var product = $('.product');
-    product.addClass('hidden')
+    product.addClass('hidden');
+    console.log(product.eq(1).data("name"));
     if (input == "") {
         product.removeClass('hidden');
     } else {
         for (i = 0; i < product.length; i++) {
-            product.eq(i).toggleClass('hidden', !product.eq(i).hasClass(input));
+            // product.eq(i).toggleClass('hidden', product.eq(i).data("name") != input);
+            product.eq(i).toggleClass('hidden', !product.eq(i).data("name").includes(input));
         }
     }
 }
