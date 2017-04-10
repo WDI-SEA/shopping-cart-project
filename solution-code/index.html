@@ -16,12 +16,12 @@
             <header class="center">
                 <h1>Categories</h1>
                 <nav>
-                    <button id="cerealButton" class="categoryButton">Cereal</button>
-                    <button id="juiceButton" class="categoryButton">Juice</button>
-                    <button id="candyButton" class="categoryButton">Candy</button>
+                    <button id="cerealButton" class="categoryButton" data-category-name="cereal">Cereal</button>
+                    <button id="juiceButton" class="categoryButton" data-category-name="juice">Juice</button>
+                    <button id="candyButton" class="categoryButton" data-category-name="candy">Candy</button>
                 </nav>
             </header>
-            <nav id="cereal" class="hidden">
+            <div id="cereal" class="productGroup hidden">
                 <div class="col-1-2" data-name="Cheerios">
                     <img src="images/cereal/cheerios.jpg" alt="Cheerios">
                     <p class="center">Cheerios</p>
@@ -42,8 +42,8 @@
                     <img src="images/cereal/raisin-bran.jpg" alt="Raisin Bran">
                     <p class="center">Raisin Bran</p>
                 </div>
-            </nav>
-            <nav id="juice" class="hidden">
+            </div>
+            <div id="juice" class="productGroup hidden">
                 <div class="col-1-2" data-name="Apple Juice">
                     <img src="images/juice/apple-juice.jpg" alt="Apple Juice">
                     <p class="center">Apple Juice</p>
@@ -64,8 +64,8 @@
                     <img src="images/juice/tomato-juice.jpg" alt="Tomato Juice">
                     <p class="center">Tomato Juice</p>
                 </div>
-            </nav>
-            <nav id="candy" class="hidden">
+            </div>
+            <div id="candy" class="productGroup hidden">
                 <div class="col-1-2" data-name="Kit Kat">
                     <img src="images/candy/kit-kat.jpg" alt="Kit Kat">
                     <p class="center">Kit Kat</p>
@@ -86,7 +86,7 @@
                     <img src="images/candy/twix.jpg" alt="Twix">
                     <p class="center">Twix</p>
                 </div>
-            </nav>
+            </div>
         </section>
         <section id="shoppingCart">
             <h1 class="center">Shopping Cart</h1>
