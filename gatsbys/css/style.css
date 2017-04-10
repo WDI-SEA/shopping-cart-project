@@ -332,20 +332,18 @@ footer {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-}
-
-.column-2 {
-    width: 46%;
-    font-family: "Montserrat", sans-serif;
-    color: #112138;
 }
 
 #submitMe {
@@ -354,7 +352,7 @@ footer {
     background-color: #FCFAF9;
     color: #112138;
     margin-top: 20px;
-    text-align: right;
+    text-align: center;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
 }
@@ -366,11 +364,33 @@ footer {
 .blank {
     border-style: none;
     background-color: #FCFAF9;
+    font-family: "Montserrat", sans-serif;
     color: #112138;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 20px;
     padding-left: 0;
+    width: 100%;
     border-bottom: 1px solid #112138;
+}
+
+
+/* ----------- ABOUT  ----------- */
+
+#aboutPage {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#aboutPage p {
+    font-family: "Forum", cursive;
+    font-size: 20px;
+    line-height: 25px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 
