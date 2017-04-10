@@ -2,16 +2,16 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FCFAF9;
-    color: #171C28;
+    color: #112138;
 }
 
 a {
     text-decoration: none;
-    color: #9FB4C7;
+    color: #5a7484;
 }
 
 a:hover {
-    color: #FCFAF9;
+    color: #809EAB;
 }
 
 
@@ -24,6 +24,7 @@ h4,
 h6 {
     text-align: center;
     font-family: "Forum", cursive;
+    color: #112138;
 }
 
 h1 {
@@ -45,7 +46,7 @@ h4 {
 
 h5 {
     font-size: 20px;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 10px 0;
     font-weight: 400;
     text-transform: uppercase;
@@ -76,22 +77,22 @@ header {
     flex-direction: row;
     justify-content: space-around;
     padding-top: 1.4em;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     letter-spacing: .3em;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #112138;
+    border-bottom: 1px solid #112138;
     height: 40px;
 }
 
 .top-navigation a {
-    color: black;
+    color: #112138;
     font-size: 20px;
     font-family: "Forum", cursive;
 }
 
 .top-navigation a:hover {
-    color: #9FB4C7;
+    color: #809EAB;
 }
 
 
@@ -122,7 +123,7 @@ header {
     width: 80%;
     padding-top: 5%;
     padding-bottom: 1%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #112138;
     margin-bottom: 5%;
 }
 
@@ -157,13 +158,13 @@ header {
 .cat h5 {
     position: absolute;
     visibility: hidden;
-    background-color: #fff;
+    background-color: #809EAB;
     width: 150px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     letter-spacing: .2em;
-    color: #000;
+    color: #FCFAF9;
 }
 
 .cat:hover h5 {
@@ -177,47 +178,49 @@ header {
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color: #EAEAEA;
+    background-color: #E8D8D1;
     height: 100%;
-    margin-top: 20px;
-    margin-right: 10px;
-}
-
-#shoppingCart h3 {
-    height: 2%;
-    margin-top: 2em;
 }
 
 #itemsInCart {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50%;
     align-self: center;
     width: 90%;
-    border-bottom: 2px solid white;
+    margin-bottom: 10px;
 }
 
 .checkout-button {
     width: 90%;
     border-style: none;
     background-color: transparent;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: .2em;
-    background-color: #FFF;
+    background-color: #e2c7c0;
+    color: #FCFAF9;
+    margin-bottom: 10px;
 }
 
 .checkout-button:hover {
-    background-color: #000;
-    color: #FFF;
+    background-color: #FCFAF9;
+    color: #2c3c51;
 }
 
 #keepShopping {
     height: 40%;
     margin-top: 2em;
     margin-bottom: 4em;
+}
+
+#keepShopping a {
+    color: #5a7484;
+}
+
+#keepShopping a:hover {
+    color: #809EAB;
 }
 
 ul {
@@ -228,7 +231,7 @@ ul {
 
 li {
     list-style: none;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     line-height: 40px;
     letter-spacing: .1em;
@@ -255,10 +258,11 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 30%;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #112138;
     margin-bottom: 2em;
+    color: #2c3c51;
 }
 
 .item:hover p.itemname {
@@ -269,6 +273,7 @@ li {
 .item:hover p.price {
     display: none;
     transition-duration: 3s;
+    ;
 }
 
 .item:hover:after {
@@ -276,6 +281,7 @@ li {
     text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 16px;
+    color: #e2c7c0;
 }
 
 img {
@@ -291,9 +297,9 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    background-color: #000;
-    color: #FFF;
-    font-family: "Fira Sans", sans-serif;
+    background-color: #112138;
+    color: #FCFAF9;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     letter-spacing: .5em;
     font-size: 10px;
@@ -306,12 +312,12 @@ footer {
 #backBtn {
     border-style: none;
     background: transparent;
-    color: #fff;
+    color: #FCFAF9;
     font-size: 15px;
     padding-left: 20px;
     letter-spacing: .3em;
     text-transform: uppercase;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -322,56 +328,66 @@ footer {
 }
 
 
-/* ----------- BORDERS FOR REFERENCE ----------- */
+/* ----------- MEDIA QUERY ----------- */
 
-
-/*header {
-    border: 1px solid blue;
+@media only screen and (max-width: 560px) {
+    .top-navigation {
+        display: none;
+    }
+    .store {
+        display: flex;
+        flex-direction: column;
+    }
+    #landing {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #homepage {
+        width: 100%;
+    }
+    .welcome {
+        display: none;
+    }
+    #shoppingCart {
+        width: 100%;
+        margin-top: 20px;
+    }
+    #keepShopping {
+        display: none;
+    }
+    .categories {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .cat {
+        width: 90%;
+    }
+    #hatsOnly,
+    #bagsOnly,
+    #printsOnly,
+    #etcOnly {
+        width: 100%;
+    }
+    .item {
+        width: 90%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer p {
+        display: none;
+    }
+    #backBtn {
+        width: 90%;
+        padding-top: 10px;
+    }
 }
-
-#brand {
-    border: 1px solid pink;
-}
-
-nav {
-    border: 1px solid pink;
-}
-
-.store {
-    border: 1px solid blue;
-}
-
-.landing {
-    border: 1px solid green;
-}
-
-.welcome {
-    border: 1px solid teal;
-}
-
-.categories {
-    border: 1px solid teal;
-}
-
-.hats,
-.bags,
-.prints,
-.etc {
-    border: 1px solid orange;
-}
-
-#shoppingCart {
-    border: 1px solid green;
-}
-
-#keepShopping,
-#itemsInCart {
-    border: 1px solid teal;
-}
-
-footer {
-    border: 1px solid blue;
-}*/
-
-
-/* ----------- BORDERS FOR REFERENCE ----------- */

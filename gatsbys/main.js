@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    // nav bar -- this is so repetitive. must be something shorter? typical a tags didn't work.
 
     var homeButton = document.getElementById("homeBtn");
 
@@ -83,8 +84,76 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    var hatsNavBar = document.getElementById("hatsNav");
 
-    // hover on item > add to cart image fades and button pops up "Add to Cart"
+    hatsNavBar.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.remove("hidden");
+        bagsOnlyPage.classList.add("hidden");
+        printsOnlyPage.classList.add("hidden");
+        etcOnlyPage.classList.add("hidden");
+        homepage.classList.add("hidden");
+
+    });
+
+    var bagsNavBar = document.getElementById("bagsNav");
+
+    bagsNavBar.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.add("hidden");
+        bagsOnlyPage.classList.remove("hidden");
+        printsOnlyPage.classList.add("hidden");
+        etcOnlyPage.classList.add("hidden");
+        homepage.classList.add("hidden");
+
+    });
+
+
+    var printsNavBar = document.getElementById("printsNav");
+
+    printsNavBar.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.add("hidden");
+        bagsOnlyPage.classList.add("hidden");
+        printsOnlyPage.classList.remove("hidden");
+        etcOnlyPage.classList.add("hidden");
+        homepage.classList.add("hidden");
+
+    });
+
+    var etcNavBar = document.getElementById("etcNav");
+
+    etcNavBar.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.add("hidden");
+        bagsOnlyPage.classList.add("hidden");
+        printsOnlyPage.classList.add("hidden");
+        etcOnlyPage.classList.remove("hidden");
+        homepage.classList.add("hidden");
+
+    });
+
+
     // item name and price are added to shopping cart list
 
     var addToCart = document.querySelectorAll('.item');
@@ -107,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     }
+
 
     // local storage
     window.onbeforeunload = function() {
