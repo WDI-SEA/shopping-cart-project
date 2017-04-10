@@ -26,7 +26,7 @@ header {
     background-image: url(../images/puppyheader.jpg);
     background-size: contain;
     background-position: center bottom;
-    height: 250px;
+    height: 30vh;
     width: 100%;
     background-repeat: no-repeat;
     margin-top: 0;
@@ -50,9 +50,6 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: column;
-    -ms-flex-pack: column;
-    justify-content: column;
     width: 100%;
 }
 
@@ -60,6 +57,10 @@ h3 {
     margin: 0;
     font-size: 1.2em;
     padding: .5em 0;
+}
+
+section {
+    height: 65vh;
 }
 
 
@@ -71,7 +72,6 @@ h3 {
 
 .store {
     background-color: #bcaa99;
-    height: 1000px;
 }
 
 .category {
@@ -87,11 +87,14 @@ h3 {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    opacity: 1;
+    transition: opacity 0.75s cubic-bezier(0.12, 0.25, 0, 0.66);
 }
 
 .subcategory li {
     padding: .5em;
     border-left: 1px solid #FFFFFF;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .subcategory li:hover {
@@ -139,7 +142,6 @@ article {
 
 .cart {
     background-color: #9A8C98;
-    height: 1000px;
     color: #FFFFFF
 }
 
@@ -148,9 +150,10 @@ article {
 }
 
 #cart-items {
-    margin: 1em;
+    margin: 0;
     list-style-image: url("../images/dogemoji.png");
     display: inline-block;
+    padding: 0;
 }
 
 #cart-items li {
@@ -167,6 +170,23 @@ input {
     font-family: inherit;
     display: block;
     margin: 0 auto;
+}
+
+.cart p {
+    margin: 1em auto;
+}
+
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: #22223B;
+    color: #FFFFFF;
+    padding: 0.75em;
 }
 
 
@@ -203,6 +223,11 @@ input {
     display: none;
 }
 
+.subcat-hidden {
+    opacity: 0;
+    height: 0;
+}
+
 
 /*Added displayed as opposed to toggling hidden
 as then i can search for currently displayed category group
@@ -210,4 +235,46 @@ and remove the class when i switch categories*/
 
 .displayed {
     display: flex;
+}
+
+@media (max-width: 775px) {
+    header {
+        height: 25vh;
+    }
+    section {
+        height: 70vh;
+    }
+    footer {
+        height: 5vh;
+    }
+    .col-60 {
+        width: 65%;
+    }
+    .col-40 {
+        width: 35%;
+    }
+    .col-33 {
+        width: 40%;
+    }
+    #cart-items li {
+        font-size: 1em;
+    }
+    .store img {
+        max-height: 80px;
+    }
+    .store-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 560px) {
+    #cart-items li {
+        font-size: 0.75em;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .subcategory li {
+        font-size: 0.75em
+    }
 }

@@ -1,13 +1,19 @@
+// notes to self, tried to add localStorage, but not quite sure how to make that work...
+// tested on ~lines 5 and 93. was able to store it
+// but not quite sure how to retrieve and have interact with current set up.
+
 var dog = {};
+// dog = JSON.parse(localStorage.getItem("lastDog"));
 var allDogPartsIds = [];
+
 
 // these two functions toggle the subcategories when the mouse enters, or leaves the element (and child elements)
 function displaySubCategories() {
-    this.children[1].classList.remove("hidden");
+    this.children[1].classList.remove("subcat-hidden");
 }
 
 function hideSubCategories() {
-    this.children[1].classList.add("hidden");
+    this.children[1].classList.add("subcat-hidden");
 }
 
 // grabs id of currently clicked menu category to grab corresponding collection of items
@@ -71,22 +77,21 @@ function checkForAllDogParts(dog, dogParts) {
     return allPartsPresent;
 }
 
-// checks if you have all the parts of a dog so you can purchase it
+// checks if you have all the parts of a dog so you can purchase it, then adds text after the cart,
+// also saves dog cart to localStorage
 function clickToPurchase() {
-    var message = document.createElement("p");
+    var message = document.querySelector(".cart p");
     var cart = document.querySelector(".cart");
+    var innerText = "";
 
     if (!checkForAllDogParts(dog, allDogPartsIds)) {
-        message.innerText = "Your dog is missing a body part! Please review and add the right part!";
+        innerText = "Your dog is missing a body part! Please review and add the right part!";
     } else {
-        message.innerText = "Your dog has been purchased! We will send you updates about the status of your new companion!";
+        innerText = "Your dog has been purchased! We will send you updates about the status of your new companion!";
     }
+    message.innerText = innerText;
 
-    if (cart.querySelector("p")) {
-        document.querySelector(".cart p").innerText = message.innerText;
-    } else {
-        document.querySelector(".cart").appendChild(message);
-    }
+    // localStorage.setItem("lastDog", JSON.stringify(dog));
 }
 
 function onLoad() {
@@ -104,8 +109,6 @@ function onLoad() {
     }
 
     // grabs all body parts as text (using ID) for later use
-
-
     for (var i = 0; i < allSubcategories.length; i++) {
         allDogPartsIds.push(allSubcategories[i].id);
     }
@@ -118,6 +121,7 @@ function onLoad() {
 
     var submitButton = document.getElementById("buy-dog");
     submitButton.addEventListener("click", clickToPurchase);
+
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);
