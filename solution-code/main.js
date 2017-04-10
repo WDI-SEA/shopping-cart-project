@@ -16,13 +16,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     var lis = document.querySelectorAll("#category-nav li");
-    lis.addEventListener("click", function() {
-        console.log("click")
-        console.log(this.innerText)
-        var HiddenElement = document.hidden;
-        for (i = 0; i <= lis.length; i++);
-        lis.classList.hidden("")
+
+    var cerealLi = lis[0];
+    var juiceLi = lis[1];
+    var candyLi = lis[2];
+
+    CerealLi.addEventListener("click", function() {
+        console.log("click" + this.innerText);
+        juiceLi.classList.add("hidden");
+        candyLi.classList.add("hidden")
     });
+
+    JuiceLi.addEventListener("click", function() {
+        console.log("click" + this.innerText);
+        cerealLi.classList.add("hidden");
+        candyLi.classList.add("hidden")
+    });
+
+
+    candyLi.addEventListener("click", function() {
+        console.log("click" + this.innerText);
+        juiceLi.classList.add("hidden");
+        cerealLi.classList.add("hidden")
+    });
+
 
     //change .hidden for #cereal-products, #candy-products, #juice-products) on click.
     //default cereal, candy.hidden, juice.hidden
@@ -36,17 +53,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    var divItemToShoppingcart = document.querySelector(".item");
-    divItemToShoppingcart.addEventListener("click", function() {
-        console.log("Item click.");
-        var shoppingcartLi = document.createElement("li");
-        shoppingcartLi.innerText = (this.item) //or this.divItemToShoppingcart
+    var divItemToShoppingcart = document.getAllElementsByClassName(".item");
+var items = querySelectorAll(".item");
+items[0].addEventListener("click", function() {
+    for (var i = 0; i < items.length; 1++) {
+        console.log("items click.");
+    }
+});
 
-        var shoppingcartUl = document.getElementById("shoppingcart-ul");
-        shoppingcartUl.appendChild(shoppingcartLi);
-    });
 
-    // var itemDiv = document.getElementsByClass(".item");
+    //     document.querySelectorAll('div').addEventListener('click'), add
+
+
+
+    //     var shoppingcartLi = document.createElement("li");
+    //     shoppingcartLi.innerText = (this.item) //or this.divItemToShoppingcart
+
+    //     var shoppingcartUl = document.getElementById("shoppingcart-ul");
+    //     shoppingcartUl.appendChild(shoppingcartLi);
+    // });
+
+
+
+    // //PRICES *******************
+    // var prices = querrySelectorAll("#data.price");
+    // for (var i = 0; i < shoppingcartUl.length; i++) {
+    //     sum += prices[i];
+    // }
+    // console.log("Total = " + sum)
+
+    // // var itemDiv = document.getElementsByClass(".item");
     // itemDiv[i].addEventListener("click", function() {
     //         console.log("This itemDivs click.");
     //         for (i = 0; i <= lis.length; i++);
