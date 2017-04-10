@@ -1,1 +1,99 @@
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joanna's Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section id="store">
+            <header class="center">
+                <h1>Categories</h1>
+                <nav>
+                    <button id="cerealButton" class="categoryButton" data-category-name="cereal">Cereal</button>
+                    <button id="juiceButton" class="categoryButton" data-category-name="juice">Juice</button>
+                    <button id="candyButton" class="categoryButton" data-category-name="candy">Candy</button>
+                </nav>
+            </header>
+            <div id="cereal" class="productGroup hidden">
+                <div class="col-1-2" data-name="Cheerios">
+                    <img src="images/cereal/cheerios.jpg" alt="Cheerios">
+                    <p class="center">Cheerios</p>
+                </div>
+                <div class="col-1-2" data-name="Crunch">
+                    <img src="images/cereal/crunch.jpg" alt="Crunch">
+                    <p class="center">Crunch</p>
+                </div>
+                <div class="col-1-2" data-name="Fruit Loops">
+                    <img src="images/cereal/fruit-loops.jpg" alt="Fruit Loops">
+                    <p class="center">Fruit Loops</p>
+                </div>
+                <div class="col-1-2" data-name="Puffs">
+                    <img src="images/cereal/puffs.jpg" alt="Puffs">
+                    <p class="center">Puffs</p>
+                </div>
+                <div class="col-1-2" data-name="Raisin Bran">
+                    <img src="images/cereal/raisin-bran.jpg" alt="Raisin Bran">
+                    <p class="center">Raisin Bran</p>
+                </div>
+            </div>
+            <div id="juice" class="productGroup hidden">
+                <div class="col-1-2" data-name="Apple Juice">
+                    <img src="images/juice/apple-juice.jpg" alt="Apple Juice">
+                    <p class="center">Apple Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Carrot Juice">
+                    <img src="images/juice/carrot-juice.jpg" alt="Carrot Juice">
+                    <p class="center">Carrot Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Grape Juice">
+                    <img src="images/juice/grape-juice.jpeg" alt="Grape Juice">
+                    <p class="center">Grape Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Orange Juice">
+                    <img src="images/juice/orange-juice.jpg" alt="Orange Juice">
+                    <p class="center">Orange Juice</p>
+                </div>
+                <div class="col-1-2" data-name="Tomato Juice">
+                    <img src="images/juice/tomato-juice.jpg" alt="Tomato Juice">
+                    <p class="center">Tomato Juice</p>
+                </div>
+            </div>
+            <div id="candy" class="productGroup hidden">
+                <div class="col-1-2" data-name="Kit Kat">
+                    <img src="images/candy/kit-kat.jpg" alt="Kit Kat">
+                    <p class="center">Kit Kat</p>
+                </div>
+                <div class="col-1-2" data-name="M & Ms">
+                    <img src="images/candy/m&ms.jpg" alt="M & Ms">
+                    <p class="center">M &amp; Ms</p>
+                </div>
+                <div class="col-1-2" data-name="Skittles">
+                    <img src="images/candy/skittles.jpg" alt="Skittles">
+                    <p class="center">Skittles</p>
+                </div>
+                <div class="col-1-2" data-name="Snickers">
+                    <img src="images/candy/snickers.jpg" alt="Snickers">
+                    <p class="center">Snickers</p>
+                </div>
+                <div class="col-1-2" data-name="Twix">
+                    <img src="images/candy/twix.jpg" alt="Twix">
+                    <p class="center">Twix</p>
+                </div>
+            </div>
+        </section>
+        <section id="shoppingCart">
+            <h1 class="center">Shopping Cart</h1>
+            <ul id="shoppingList" class="center">
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
