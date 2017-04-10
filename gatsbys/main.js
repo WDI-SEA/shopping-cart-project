@@ -46,6 +46,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    // back button
+
+    var backButton = document.getElementById("backBtn");
+
+    backButton.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.add("hidden");
+        bagsOnlyPage.classList.add("hidden");
+        printsOnlyPage.classList.add("hidden");
+        etcOnlyPage.classList.add("hidden");
+        homepage.classList.remove("hidden");
+
+    });
+
+
+    var homeButton = document.getElementById("homeBtn");
+
+    homeButton.addEventListener('click', function() {
+        var homepage = document.getElementById("homepage");
+        var hatsOnlyPage = document.getElementById("hatsOnly");
+        var bagsOnlyPage = document.getElementById("bagsOnly");
+        var printsOnlyPage = document.getElementById("printsOnly");
+        var etcOnlyPage = document.getElementById("etcOnly");
+
+        hatsOnlyPage.classList.add("hidden");
+        bagsOnlyPage.classList.add("hidden");
+        printsOnlyPage.classList.add("hidden");
+        etcOnlyPage.classList.add("hidden");
+        homepage.classList.remove("hidden");
+
+    });
+
+
     // hover on item > add to cart image fades and button pops up "Add to Cart"
     // item name and price are added to shopping cart list
 
@@ -61,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
             var allItemsInCart = document.getElementById("cart");
             var shoppingListItem = document.createElement("li");
 
-            shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " + itemToPurchasePrice.innerText));
+            shoppingListItem.appendChild(document.createTextNode(itemToPurchase.innerText + ", " +
+                itemToPurchasePrice.innerText));
 
             cart.appendChild(shoppingListItem);
 
@@ -69,6 +108,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
-    // shopping list: need button to delete items
+    // local storage
+    window.onbeforeunload = function() {
+        localStorage.setItem(item.itemToPurchase.innerText);
+        localStorage.setItem(item.itemToPurchasePrice.innerText);
+    }
 
+    // cart total
+
+    // media query
 });
