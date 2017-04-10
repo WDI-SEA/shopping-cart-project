@@ -1,1 +1,113 @@
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <main class="flex-box">
+        <section class="left col50 flex-box">
+            <div class="categories col100 flex-box">
+                <h2 class="col100">Categories</h2>
+                <!-- <img src="images/search.png" alt="search"> -->
+                <input type="text" name="search" class="col100 search" placeholder="Search for Item">
+                <div id="cerealButton" class="col30">Cereal</div>
+                <div id="juiceButton" class="col30">Juices</div>
+                <div id="candyButton" class="col30">Candy</div>
+            </div>
+            <section class="Cereal category active flex-box">
+                <div class="product" data-price="1.5" data-name='cheerios'>
+                    <img src="images/cereal/cheerios.jpg" alt="cheerios">
+                    <br>
+                    <span>Cheerios</span>
+                </div>
+                <div class="product" data-price="2" data-name="crunch">
+                    <img src="images/cereal/crunch.jpg" alt="crunch">
+                    <br>
+                    <span>Crunch</span>
+                </div>
+                <div class="product" data-price="1.75" data-name="fruit loops">
+                    <img src="images/cereal/fruit-loops.jpg" alt="loops">
+                    <br>
+                    <span>Fruit-Loops</span>
+                </div>
+                <div class="product" data-price="3" data-name="puffs">
+                    <img src="images/cereal/puffs.jpg" alt="puffs">
+                    <br>
+                    <span>Puffs</span>
+                </div>
+                <div class="product" data-price="5" data-name="raisin bran">
+                    <img src="images/cereal/raisin-bran.jpg" alt="bran">
+                    <br>
+                    <span>Raisin-bran </span>
+                </div>
+            </section>
+            <section class="Juices category hidden flex-box">
+                <div class="product" data-price="1.5" data-name="apple juice">
+                    <img src="images/juice/apple-juice.jpg" alt="apple">
+                    <br>
+                    <span>Apple Juice</span>
+                </div>
+                <div class="product" data-price="1.5" data-name="carrot juice">
+                    <img src="images/juice/carrot-juice.jpg" alt="carrot">
+                    <br>
+                    <span>Carrot Juice</span>
+                </div>
+                <div class="product" data-price="1.5" data-name="grape juice">
+                    <img src="images/juice/grape-juice.jpeg" alt="grape">
+                    <br>
+                    <span>Grape Juice</span>
+                </div>
+                <div class="product" data-price="1.75" data-name="orange juice">
+                    <img src="images/juice/orange-juice.jpg" alt="orange">
+                    <br>
+                    <span>Orange Juice</span>
+                </div>
+                <div class="product" data-price="20" data-name="tomato juice">
+                    <img src="images/juice/tomato-juice.jpg" alt="tomato">
+                    <br>
+                    <span>Tomato Juice</span>
+                </div>
+            </section>
+            <section class="Candy category hidden flex-box">
+                <div class="product" data-price="1.5" data-name="kit-kat">
+                    <img src="images/candy/kit-kat.jpg" alt="kitkat">
+                    <br>
+                    <span>Kit-Kat</span>
+                </div>
+                <div class="product" data-price="2" data-name="m&m">
+                    <img src="images/candy/m&ms.jpg" alt="mm">
+                    <br>
+                    <span>M&M's</span>
+                </div>
+                <div class="product" data-price="2" data-name="skittles">
+                    <img src="images/candy/skittles.jpg" alt="skittles">
+                    <br>
+                    <span>Skittles</span>
+                </div>
+                <div class="product" data-price="1.5" data-name="raisin twix">
+                    <img src="images/candy/twix.jpg" alt="twix">
+                    <br>
+                    <span>Raisin Twix</span>
+                </div>
+            </section>
+        </section>
+        <section class=" flex-box cart col50">
+            <h2>Shopping Cart</h2>
+            <span id="total"></span>
+            <ul id="cartList">
+            </ul>
+            <button id="clear">Clear Cart</button>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
