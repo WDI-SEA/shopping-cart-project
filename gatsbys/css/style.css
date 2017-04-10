@@ -1,0 +1,466 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFAF9;
+    color: #112138;
+}
+
+a {
+    text-decoration: none;
+    color: #5a7484;
+}
+
+a:hover {
+    color: #809EAB;
+}
+
+
+/* ----------- HEADING STYLES ----------- */
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+    text-align: center;
+    font-family: "Forum", cursive;
+    color: #112138;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: -10px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+
+/* ----------- HEADER ----------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#brand {
+    display: flex;
+    flex-direction: column;
+}
+
+#brand img {
+    width: 200px;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+.top-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1.4em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    border-top: 1px solid #112138;
+    border-bottom: 1px solid #112138;
+    height: 40px;
+}
+
+.top-navigation a {
+    color: #112138;
+    font-size: 20px;
+    font-family: "Forum", cursive;
+}
+
+.top-navigation a:hover {
+    color: #809EAB;
+}
+
+
+/* ----------- HOME PAGE ----------- */
+
+.store {
+    display: flex;
+    flex-direction: row;
+}
+
+#landing {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#homepage {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 20px;
+    font-family: "Forum", cursive;
+    line-height: 25px;
+    width: 80%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #112138;
+    margin-bottom: 5%;
+}
+
+.categories {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    max-width: 300px;
+    margin: 1%;
+}
+
+.cat-img {
+    width: 100%;
+}
+
+.cat:hover img {
+    opacity: .2;
+}
+
+.cat h5 {
+    position: absolute;
+    visibility: hidden;
+    background-color: #809EAB;
+    width: 150px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: .2em;
+    color: #FCFAF9;
+}
+
+.cat:hover h5 {
+    visibility: visible;
+}
+
+
+/* ----------- SHOPPING CART ----------- */
+
+#shoppingCart {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #E8D8D1;
+    height: 100%;
+}
+
+#itemsInCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.checkout-button {
+    width: 90%;
+    border-style: none;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    background-color: #e2c7c0;
+    color: #FCFAF9;
+    margin-bottom: 10px;
+}
+
+.checkout-button:hover {
+    background-color: #FCFAF9;
+    color: #2c3c51;
+}
+
+#keepShopping {
+    height: 40%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+#keepShopping a {
+    color: #5a7484;
+}
+
+#keepShopping a:hover {
+    color: #809EAB;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: .1em;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+
+/* ----------- CATEGORY PAGES ----------- */
+
+.category-page {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    border-bottom: 1px solid #112138;
+    margin-bottom: 2em;
+    color: #2c3c51;
+}
+
+.item:hover p.itemname {
+    display: none;
+    transition-duration: 3s;
+}
+
+.item:hover p.price {
+    display: none;
+    transition-duration: 3s;
+    ;
+}
+
+.item:hover:after {
+    content: 'Add Item to Shopping Cart';
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #e2c7c0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ----------- FOOTER ----------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #112138;
+    color: #FCFAF9;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#backBtn {
+    border-style: none;
+    background: transparent;
+    color: #FCFAF9;
+    font-size: 15px;
+    padding-left: 20px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* ----------- CONTACT PAGE ----------- */
+
+#contactPage {
+    width: 70%;
+    text-align: center;
+}
+
+.comment-form {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#submitMe {
+    width: 100%;
+    border-style: none;
+    background-color: #FCFAF9;
+    color: #112138;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+#submitMe:hover {
+    color: #2c3c51;
+}
+
+.blank {
+    border-style: none;
+    background-color: #FCFAF9;
+    font-family: "Montserrat", sans-serif;
+    color: #112138;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    width: 100%;
+    border-bottom: 1px solid #112138;
+}
+
+
+/* ----------- ABOUT  ----------- */
+
+#aboutPage {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#aboutPage p {
+    font-family: "Forum", cursive;
+    font-size: 20px;
+    line-height: 25px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* ----------- HIDING ----------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ----------- MEDIA QUERY ----------- */
+
+@media only screen and (max-width: 560px) {
+    .top-navigation {
+        display: none;
+    }
+    .store {
+        display: flex;
+        flex-direction: column;
+    }
+    #landing {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #homepage {
+        width: 100%;
+    }
+    .welcome {
+        display: none;
+    }
+    #shoppingCart {
+        width: 100%;
+        margin-top: 20px;
+    }
+    #keepShopping {
+        display: none;
+    }
+    .categories {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .cat {
+        width: 90%;
+    }
+    #hatsOnly,
+    #bagsOnly,
+    #printsOnly,
+    #etcOnly {
+        width: 100%;
+    }
+    .item {
+        width: 90%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer p {
+        display: none;
+    }
+    #backBtn {
+        width: 90%;
+        padding-top: 10px;
+    }
+}
