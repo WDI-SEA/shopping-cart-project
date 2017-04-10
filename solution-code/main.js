@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var juiceLi = lis[1];
     var candyLi = lis[2];
 
-    CerealLi.addEventListener("click", function() {
+    cerealLi.addEventListener("click", function() {
         console.log("click" + this.innerText);
         juiceLi.classList.add("hidden");
         candyLi.classList.add("hidden")
     });
 
-    JuiceLi.addEventListener("click", function() {
+    juiceLi.addEventListener("click", function() {
         console.log("click" + this.innerText);
         cerealLi.classList.add("hidden");
         candyLi.classList.add("hidden")
@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     var divItemToShoppingcart = document.getAllElementsByClassName(".item");
-var items = querySelectorAll(".item");
-items[0].addEventListener("click", function() {
-    for (var i = 0; i < items.length; 1++) {
-        console.log("items click.");
-    }
-});
+    var items = querySelectorAll(".item");
+    items[0].addEventListener("click", function() {
+        for (var i = 0; i < items.length; 1++) {
+            console.log("items click.");
+        }
+    });
 
 
     //     document.querySelectorAll('div').addEventListener('click'), add
