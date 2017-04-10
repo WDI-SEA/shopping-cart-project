@@ -1,39 +1,77 @@
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+body {
+    font-family: sans-serif;
+    display: flex;
+}
 
-    .cereal,
-    .liturature,
-    .soup {
-        width: 40%;
-        padding: 0 4%;
-        /*height: */
-    }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-    img {
-        width: 100%;
-    }
+#cerealId,
+#literatureId,
+#soupId {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-    #navCategories {
-        width: 100%;
-        /*margin: 2em auto;
-*/
-        list-style: none;
-        display: flex;
-        color: yellow;
-        justify-content: space-around;
-        text-align: center;
-/*        padding: 0;
-*/
-    }
+.box {
+    width: 40%;
+    padding: 4%;
+    border: 1px solid #b6b6b6;
+    margin-top: 1em;
+    text-align: center;
+    height:
+}
 
-    nav {
-        background-color: navy;
-        margin: auto;
-    }
+.hidden {
+    display: none;
+}
 
-    h1 {
-        text-align: center;
-    }
+img {
+    width: 100%;
+}
+
+#navCategories {
+    list-style: none;
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1em;
+    margin-top: .5em;
+}
+
+nav {
+    background-color: navy;
+    /*margin: auto;*/
+    padding: 1em 0;
+}
+
+nav h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#products {
+    width: 50%;
+}
+
+#shoppingCart {
+    background-color: #dcdcdc;
+    width: 50%;
+    text-align: center;
+}
+
+#shoppingCart h1 {
+    text-align: center;
+    color: #000;
+    font-size: 2em;
+    font-weight: 600;
+    margin: .5em;
+    /*    padding: 2em auto .5em;*/
+}
