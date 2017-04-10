@@ -321,6 +321,59 @@ footer {
 }
 
 
+/* ----------- CONTACT PAGE ----------- */
+
+#contactPage {
+    width: 70%;
+    text-align: center;
+}
+
+.comment-form {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column-2 {
+    width: 46%;
+    font-family: "Montserrat", sans-serif;
+    color: #112138;
+}
+
+#submitMe {
+    width: 100%;
+    border-style: none;
+    background-color: #FCFAF9;
+    color: #112138;
+    margin-top: 20px;
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+#submitMe:hover {
+    color: #2c3c51;
+}
+
+.blank {
+    border-style: none;
+    background-color: #FCFAF9;
+    color: #112138;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid #112138;
+}
+
+
 /* ----------- HIDING ----------- */
 
 .hidden {
