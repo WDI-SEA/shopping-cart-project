@@ -1,1 +1,125 @@
+body {
+    background-image: url(images/bgkitchen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    max-width: 100%;
+    filter: drop-shadow(15px 15px 10px white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 4em;
+}
 
+h1 {
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 100%;
+    color: white;
+    text-align: center;
+    border: 5px outset wheat;
+}
+
+.title {
+    display: flex;
+}
+
+h3 {
+    border: 5px outset wheat;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.64);
+    text-align: center;
+    color: white;
+}
+
+header {
+    border: 5px outset wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.64);
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    cursor: pointer;
+    border: none;
+    font-size: 14pt;
+}
+
+.dropbtn:hover {
+    transition-duration: .5s;
+    background-color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#candylist,
+#juicelist,
+#cereallist {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px;
+}
+
+#candylist a,
+#juicelist a,
+#cereallist a {
+    display: block;
+    text-decoration: none;
+    font-size: 18pt;
+    color: white;
+}
+
+#candylist a:hover,
+#juicelist a:hover,
+#cereallist a:hover {
+    transition-duration: .2s;
+    background-color: black;
+}
+
+.dropdown:hover #candylist {
+    display: block;
+}
+
+.dropdown:hover #juicelist {
+    display: block;
+}
+
+.dropdown:hover #cereallist {
+    display: block;
+}
+
+#shoppinglist {
+    background-color: rgba(255, 255, 255, .6);
+    filter: drop-shadow(15px 15px 10px white);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: 5px outset wheat;
+}
+
+#shoppinglist a {
+    display: block;
+}
+
+div#shoppinglist {
+    font-size: 20pt;
+}
+
+img {
+    width: 100%;
+}
