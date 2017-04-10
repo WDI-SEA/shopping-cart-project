@@ -1,1 +1,66 @@
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Artwork Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photography by Nurya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Photography by Nurya</h1>
+    </header>
+    <main>
+        <section id="category-section" class="">
+            <h3>Gallery</h3>
+            <nav>
+                <ul>
+                    <li class="cat-nav" id="category-flora" data-category="flora">FLORA</li>
+                    <li class="cat-nav" id="category-fauna" data-category="fauna">FAUNA</li>
+                    <li class="cat-nav" id="category-insecta" data-category="insecta">INSECTA</li>
+                </ul>
+            </nav>
+            <div id="category-start" class=" flex-container">
+            </div>
+            <div id="flora" class="flex-container category">
+                <img id="Tulips" class="col-1-2 products" src="images/flora/flora-1.jpg" alt="Tulips are Red">
+                <img id="Purple-flowers" class="col-1-2 products" src="images/flora/flora-2.jpg" alt="Purple flower hates rhymes">
+                <img id="Roses" class="col-1-2 products" src="images/flora/flora-3.jpg" alt="Roses smell pretty.">
+                <img id="White-flower" class="col-1-2 products" src="images/flora/flora-4.jpg" alt="And many guys love pink.">
+                <img id="Dogwood" class="col-1-2 products" src="images/flora/flora-5.jpg" alt="Dogwoods don't stink">
+            </div>
+            <div id="fauna" class="flex-container hidden category">
+                <img id="Cat" class="col-1-2 products" src="images/fauna/fauna-1.jpg" alt="CATS! The non-musical">
+                <img id="Tiny-owl" class="col-1-2 products" src="images/fauna/fauna-2.jpg" alt="Owl only have eyes for you.">
+                <img id="White-owl" class="col-1-2 products" src="images/fauna/fauna-3.jpg" alt="white floofy owl">
+                <img id="Peacock" class="col-1-2 products" src="images/fauna/fauna-4.jpg" alt="I wanna see your peacock!">
+                <img id="Wolf" class="col-1-2 products" src="images/fauna/fauna-5.jpg" alt="Hungry like the wolf.">
+            </div>
+            <div id="insecta" class="flex-container hidden category">
+                <img id="Butterfly-with-flowers" class="col-1-2 products" src="images/insecta/insecta-1.jpg" alt="I like to lick petals.">
+                <img id="Dragonfly" class="col-1-2 products" src="images/insecta/insecta-2.jpg" alt="Next on drag(onfly)net.">
+                <img id="Angry-ladybug" class="col-1-2 products" src="images/insecta/insecta-3.jpg" alt="Hell hath no fury like a ladybug scorned!">
+                <img id="Butterfly-with-baubles" class="col-1-2 products" src="images/insecta/insecta-4.jpg" alt="OOOH Shiny!">
+                <img id="Ladybug" class="col-1-2 products" src="images/insecta/insecta-5.jpg" alt="Ladybug Ladybug fly away home.">
+            </div>
+            <!-- MVP- three buttons- categories --five images -- items for each category --click to add to cart -->
+        </section>
+        <section id="cart-section">
+            <h3>Cart</h3>
+            <!-- Cart -->
+            <!-- MVP- Able to list products -->
+            <ul id="cart">
+            </ul>
+            <div id="total" class="hidden">Total:</div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright"> Site design &copy;2017 Steve Keiser. All Photography &copy; Anna Nurya Deprey, and should not be used or duplicated without written permission. </p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
