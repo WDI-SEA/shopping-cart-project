@@ -1,33 +1,65 @@
 body {
-    border: 1px solid black;
+    background-image: url(images/bgkitchen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    max-width: 100%;
+    filter: drop-shadow(15px 15px 10px white);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 1em;
+    margin: 4em;
 }
 
 h1 {
-    text-align: center
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 100%;
+    color: white;
+    text-align: center;
+    border: 5px outset wheat;
+}
+
+.title {
+    display: flex;
 }
 
 h3 {
-    padding-left: 4em;
-    padding-right: 4em;
+    border: 5px outset wheat;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.64);
+    text-align: center;
+    color: white;
 }
 
 header {
+    border: 5px outset wheat;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    border: 1px solid blue;
+    align-items: baseline;
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.64);
 }
 
 .dropbtn {
-    background-color: red;
+    background-color: transparent;
     color: white;
     padding: 16px;
     cursor: pointer;
     border: none;
+    font-size: 14pt;
+}
+
+.dropbtn:hover {
+    transition-duration: .5s;
+    background-color: black;
 }
 
 .dropdown {
@@ -40,22 +72,23 @@ header {
 #cereallist {
     display: none;
     position: absolute;
-    background-color: blue;
     box-shadow: 0px 8px 16px 0px;
 }
 
 #candylist a,
 #juicelist a,
 #cereallist a {
-    color: black;
-    padding: 12px 16px;
     display: block;
+    text-decoration: none;
+    font-size: 18pt;
+    color: white;
 }
 
 #candylist a:hover,
 #juicelist a:hover,
 #cereallist a:hover {
-    background-color: green;
+    transition-duration: .2s;
+    background-color: black;
 }
 
 .dropdown:hover #candylist {
@@ -70,21 +103,23 @@ header {
     display: block;
 }
 
-main {
+#shoppinglist {
+    background-color: rgba(255, 255, 255, .6);
+    filter: drop-shadow(15px 15px 10px white);
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 20%;
+    border: 5px outset wheat;
+}
+
+#shoppinglist a {
+    display: block;
 }
 
 div#shoppinglist {
-    width: 100%;
+    font-size: 20pt;
 }
 
 img {
-    width: 20%;
-}
-
-footer {
-    border: 1px solid green;
-    text-align: center;
+    width: 100%;
 }

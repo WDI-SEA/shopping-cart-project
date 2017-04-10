@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     for (var i = 0; i < groceryToBeMove.getElementsByTagName("li").length; i++)
-        groceryToBeMove.getElementsByTagName("li")[i].onclick = onClickGrocery;
+        groceryToBeMove.getElementsByTagName("a")[i].onclick = onClickGrocery;
 
 
     for (var i = 0; i < shoppingToBeMove.getElementsByTagName("li").length; i++)
-        shoppingToBeMove.getElementsByTagName("li")[i].onclick = onClickShopping;
+        shoppingToBeMove.getElementsByTagName("a")[i].onclick = onClickShopping;
 
     var groceryToBeMove = document.getElementById("juicelist");
     var shoppingToBeMove = document.getElementById("shoppinglist");
@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     for (var i = 0; i < groceryToBeMove.getElementsByTagName("li").length; i++)
-        groceryToBeMove.getElementsByTagName("li")[i].onclick = onClickGrocery;
+        groceryToBeMove.getElementsByTagName("a")[i].onclick = onClickGrocery;
 
 
     for (var i = 0; i < shoppingToBeMove.getElementsByTagName("li").length; i++)
-        shoppingToBeMove.getElementsByTagName("li")[i].onclick = onClickShopping;
+        shoppingToBeMove.getElementsByTagName("a")[i].onclick = onClickShopping;
 
 
 
@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     for (var i = 0; i < groceryToBeMove.getElementsByTagName("li").length; i++)
-        groceryToBeMove.getElementsByTagName("li")[i].onclick = onClickGrocery;
+        groceryToBeMove.getElementsByTagName("a")[i].onclick = onClickGrocery;
 
 
     for (var i = 0; i < shoppingToBeMove.getElementsByTagName("li").length; i++)
-        shoppingToBeMove.getElementsByTagName("li")[i].onclick = onClickShopping;
+        shoppingToBeMove.getElementsByTagName("a")[i].onclick = onClickShopping;
 
 })
