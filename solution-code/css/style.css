@@ -1,8 +1,9 @@
 body {
-    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    font: 20px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4;
+    font-family: 'chewy', sans-serif;
 }
 
 
@@ -34,15 +35,15 @@ header a {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
-    border: 2px solid white;
-    padding: 2px;
+    font-size: 18px;
+    border: 1px solid white;
+    padding: 5px;
 }
 
 header li {
     float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 10px 20px 10px 20px;
     border-radius: 50px solid white;
 }
 
@@ -57,6 +58,7 @@ header #banner h1 {
 header nav {
     float: right;
     margin-top: 10px;
+    padding-bottom: 10px;
     border-radius: 50px solid white;
 }
 
@@ -87,8 +89,9 @@ img {
     background-color: black;
     color: white;
     margin-top: 0;
+    padding-bottom: 20px;
     padding: 0;
-    font-size: 30px;
+    font-size: 40px;
     width: 500px 0px;
 }
 
@@ -136,7 +139,7 @@ img {
 }
 
 p {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
@@ -155,8 +158,10 @@ p {
     border-left: 10px solid #f4f4f4;
 }
 
-#middle-box-2 li {
+#middle-box-2 #Shopping-List {
     padding: 0 20px 0 20px;
+    text-align: center;
+    font-size: 45px;
 }
 
 #middle-box-2 h2 {
@@ -166,6 +171,7 @@ p {
     padding: 23px 0;
     margin-bottom: 18px;
     margin-top: 0;
+    font-size: 30px;
 }
 
 
