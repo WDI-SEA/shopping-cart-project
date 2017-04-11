@@ -1,1 +1,186 @@
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DogNA</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Share%7CSigmar+One" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>DogNA - Designer Dogs</h1>
+    </header>
+    <main>
+        <section class="store col-60">
+            <!-- subheaders of store -->
+            <div id="body-parts" class="category">
+                <h3>Body Parts</h3>
+                <ul class="subcategory subcat-hidden">
+                    <li id="ears" class="col-15">Ears</li>
+                    <li id="eyes" class="col-15">Eyes</li>
+                    <li id="head" class="col-15">Head</li>
+                    <li id="body" class="col-15">Body</li>
+                    <li id="fur" class="col-15">Fur</li>
+                    <li id="tail" class="col-15">Tail</li>
+                </ul>
+            </div>
+            <!--             I may have been too ambitious - will get to these categories if i have time
+                <div id="personality" class="category">
+                <h3>Personality</h3>
+                <ul class="subcategory subcat-hidden">
+                    <li class="col-25">Working Group</li>
+                    <li class="col-25">Temperment</li>
+                    <li class="col-25">Intelligence</li>
+                    <li class="col-25">Cats</li>
+                </ul>
+            </div> -->
+            <h3 class="title"></h3>
+            <!-- ears -->
+            <div data-cat="ears" class="store-container hidden">
+                <div id="straight-up" class="col-33" data-cat="ears">
+                    <img src="images/ears/straightup.jpg" alt="dog ears stick striaght up">
+                    <p>Straight Up</p>
+                </div>
+                <div id="floppy" class="col-33" data-cat="ears">
+                    <img src="images/ears/floppy.jpg" alt="floppy dog ears">
+                    <p>Floppy</p>
+                </div>
+                <div id="cropped" class="col-33" data-cat="ears">
+                    <img src="images/ears/cropped.jpg" alt="cropped dog ears">
+                    <p>Cropped</p>
+                </div>
+                <div id="uneven" class="col-33" data-cat="ears">
+                    <img src="images/ears/uneven.jpg" alt="uneven dog ears">
+                    <p>Uneven</p>
+                </div>
+                <div id="wavy" class="col-33" data-cat="ears">
+                    <img src="images/ears/wavy.jpg" alt="wavydog ears">
+                    <p>Wavy</p>
+                </div>
+            </div>
+            <!-- eyes -->
+            <div data-cat="eyes" class="store-container hidden">
+                <div id="droopy-brown" class="col-33" data-cat="eyes">
+                    <img src="images/eyes/droopybrown.jpg" alt="droopy brown dog eyes">
+                    <p>Droopy Brown</p>
+                </div>
+                <div id="alert-blue" class="col-33" data-cat="eyes">
+                    <img src="images/eyes/alertblue.jpg" alt="alert blue dog eyes">
+                    <p>Alert Blue</p>
+                </div>
+                <div id="heterochromatic" class="col-33" data-cat="eyes">
+                    <img src="images/eyes/mismatch.jpg" alt="mismatched (heterochromatic) dog eyes">
+                    <p>Heterochromatic</p>
+                </div>
+                <div id="bug-eyed" class="col-33" data-cat="eyes">
+                    <img src="images/eyes/bugeyes.jpg" alt="bugged out dog eyes">
+                    <p>Bug Eyed</p>
+                </div>
+            </div>
+            <!-- heads -->
+            <div data-cat="head" class="store-container hidden">
+                <div id="brachycephalic" class="col-33" data-cat="head">
+                    <img src="images/heads/brachycephalic.jpg" alt="brachycephalic dog head">
+                    <p>Brachycephalic</p>
+                </div>
+                <div id="long-and-narrow" class="col-33" data-cat="head">
+                    <img src="images/heads/dolichocephalic.jpg" alt="dolichocephalic dog head">
+                    <p>Long and Narrow</p>
+                </div>
+                <div id="proportionate" class="col-33" data-cat="head">
+                    <img src="images/heads/mesaticephalic.jpg" alt="mesaticephalic dog head">
+                    <p>Proportionate</p>
+                </div>
+                <div id="blocky" class="col-33" data-cat="head">
+                    <img src="images/heads/blocky.jpg" alt="blocky dog head">
+                    <p>Blocky</p>
+                </div>
+                <div id="apple" class="col-33" data-cat="head">
+                    <img src="images/heads/apple.jpg" alt="apple shaped dog head">
+                    <p>Apple</p>
+                </div>
+            </div>
+            <!-- bodies -->
+            <div data-cat="body" class="store-container hidden">
+                <div id="short" class="col-33" data-cat="body">
+                    <img src="images/body/short.jpg" alt="short dog body">
+                    <p>Short</p>
+                </div>
+                <div id="broad" class="col-33" data-cat="body">
+                    <img src="images/body/broad.jpg" alt="broad dog body">
+                    <p>Broad</p>
+                </div>
+                <div id="lanky" class="col-33" data-cat="body">
+                    <img src="images/body/lanky.jpg" alt="lanky dog body">
+                    <p>Lanky</p>
+                </div>
+                <div id="giant" class="col-33" data-cat="body">
+                    <img src="images/body/giant.jpg" alt="giant dog body">
+                    <p>Giant</p>
+                </div>
+                <div id="tiny" class="col-33" data-cat="body">
+                    <img src=" images/body/tiny.jpg " alt="tiny dog body ">
+                    <p>Tiny</p>
+                </div>
+            </div>
+            <!-- fur -->
+            <div data-cat="fur" class="store-container hidden">
+                <div id="spotted" class="col-33 " data-cat="fur">
+                    <img src="images/fur/spotted.jpg " alt="spotted dog fur ">
+                    <p>Spotted</p>
+                </div>
+                <div id="brindle" class="col-33" data-cat="fur">
+                    <img src="images/fur/brindle.png" alt="brindle dog fur">
+                    <p>Brindle</p>
+                </div>
+                <div id="tricolor" class="col-33" data-cat="fur">
+                    <img src="images/fur/tricolor.jpg" alt="tricolor dog fur">
+                    <p>Tricolor</p>
+                </div>
+                <div id="merle" class="col-33" data-cat="fur">
+                    <!-- this pic is my dog!!! -->
+                    <img src="images/fur/merle.jpg" alt="merle dog fur">
+                    <p>Merle</p>
+                </div>
+                <div id="solid" class="col-33" data-cat="fur">
+                    <img src="images/fur/solid.jpg" alt="solid dog fur">
+                    <p>Solid</p>
+                </div>
+            </div>
+            <!-- tails -->
+            <div data-cat="tail" class="store-container hidden ">
+                <div id="stubby" class="col-33 " data-cat="tail">
+                    <img src="images/tail/short.jpg " alt="stubby dog tail">
+                    <p>Stubby</p>
+                </div>
+                <div id="long" class="col-33 " data-cat="tail">
+                    <img src="images/tail/long.jpg " alt="long dog tail">
+                    <p>Long</p>
+                </div>
+                <div id="curly" class="col-33 " data-cat="tail">
+                    <img src="images/tail/curly.jpg " alt="curly dog tail">
+                    <p>Curly</p>
+                </div>
+            </div>
+        </section>
+        <section class="cart col-40">
+            <h3>Cart</h3>
+            <ul id="cart-items">
+                <!-- append items here as ordered -->
+            </ul>
+            <input id="buy-dog" type="submit" value="Purchase Your Dog!">
+            <p class="col-60"></p>
+        </section>
+    </main>
+    <footer>
+        <p>designed and coded by sara kevorkian ©2017</p>
+    </footer>
+</body>
+
+</html>

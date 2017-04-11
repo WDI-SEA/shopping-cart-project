@@ -1,0 +1,280 @@
+/*color palette: https://coolors.co/22223b-4a4e69-ffffff-bcaa99-9a8c98*/
+
+
+/*
+
+    UNIVERSAL
+
+*/
+
+body {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Share', cursive;
+}
+
+
+/*
+
+    HEADER
+
+*/
+
+header {
+    background-color: white;
+    background-image: url(../images/puppyheader.jpg);
+    background-size: contain;
+    background-position: center bottom;
+    height: 30vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'Sigmar One', cursive;
+    color: #22223B;
+    margin: 0;
+}
+
+
+/*
+
+    MAIN
+
+*/
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2em;
+    padding: .5em 0;
+}
+
+section {
+    height: 65vh;
+}
+
+
+/*
+
+    STORE
+
+*/
+
+.store {
+    background-color: #bcaa99;
+}
+
+.category {
+    background-color: #22223B;
+    color: #FFFFFF;
+    border-bottom: 1px solid #4A4E69;
+}
+
+.subcategory {
+    background-color: #4A4E69;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.75s cubic-bezier(0.12, 0.25, 0, 0.66);
+}
+
+.subcategory li {
+    padding: .5em;
+    border-left: 1px solid #FFFFFF;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.subcategory li:hover {
+    background-color: #22223B;
+}
+
+.subcategory li:first-child {
+    border-left-color: transparent;
+}
+
+.store-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+.title {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+article {
+    margin-top: 1em;
+}
+
+.store img {
+    max-height: 150px;
+}
+
+
+/*
+
+    CART
+
+*/
+
+.cart {
+    background-color: #9A8C98;
+    color: #FFFFFF
+}
+
+.cart h3 {
+    background-color: #4A4E69;
+}
+
+#cart-items {
+    margin: 0;
+    list-style-image: url("../images/dogemoji.png");
+    display: inline-block;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: .5em;
+    font-size: 1.5em;
+}
+
+input {
+    background-color: #22223B;
+    border: 2px ridge #4A4E69;
+    border-radius: 0.5em;
+    color: #FFFFFF;
+    padding: 0.5em;
+    font-family: inherit;
+    display: block;
+    margin: 0 auto;
+}
+
+.cart p {
+    margin: 1em auto;
+}
+
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: #22223B;
+    color: #FFFFFF;
+    padding: 0.75em;
+}
+
+
+/*
+
+    REUSABLE
+
+*/
+
+.col-60 {
+    width: 60%;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-33 {
+    width: 33%;
+    box-sizing: border-box;
+}
+
+.col-25 {
+    width: 24.3%;
+    box-sizing: border-box;
+}
+
+.col-15 {
+    width: 15%;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.subcat-hidden {
+    opacity: 0;
+    height: 0;
+}
+
+
+/*Added displayed as opposed to toggling hidden
+as then i can search for currently displayed category group
+and remove the class when i switch categories*/
+
+.displayed {
+    display: flex;
+}
+
+@media (max-width: 775px) {
+    header {
+        height: 25vh;
+    }
+    section {
+        height: 70vh;
+    }
+    footer {
+        height: 5vh;
+    }
+    .col-60 {
+        width: 65%;
+    }
+    .col-40 {
+        width: 35%;
+    }
+    .col-33 {
+        width: 40%;
+    }
+    #cart-items li {
+        font-size: 1em;
+    }
+    .store img {
+        max-height: 80px;
+    }
+    .store-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 560px) {
+    #cart-items li {
+        font-size: 0.75em;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .subcategory li {
+        font-size: 0.75em
+    }
+}
