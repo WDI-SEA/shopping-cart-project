@@ -1,59 +1,70 @@
-function myFunction() {
+// document.addEventListener("DOMContentLoaded", function() {
+//             console.log("Loaded!");
+
+
+//Candy.html page//
+
+function myCandy1() {
     var item1 = document.getElementById('item1');
     item1.innerHTML = 'M&Ms';
 }
 
-function myFunction2() {
+function myCandy2() {
     var item2 = document.getElementById('item2');
     item2.innerHTML = 'Twix';
 }
 
-function myFunction3() {
+function myCandy3() {
     var item3 = document.getElementById('item3');
     item3.innerHTML = 'Kit-Kit';
 }
 
-function myFunction4() {
+function myCandy4() {
     var item4 = document.getElementById('item4');
     item4.innerHTML = 'Snickers';
 }
 
-function myFunction5() {
+//Drinks.html page///
+
+function myCandy5() {
     var item5 = document.getElementById('item5');
     item5.innerHTML = 'Grape Juice';
 }
 
-function myFunction6() {
+function myCandy6() {
     var item6 = document.getElementById('item6');
-    item6.innerHTML = 'Tomato Juice';
+    item6.innerHTML = 'Carrot Juice';
 }
 
-function myFunction7() {
+function myCandy7() {
     var item7 = document.getElementById('item7');
-    item7.innerHTML = 'Carrot Juice';
+    item7.innerHTML = 'Tomato Juice';
 }
 
-function myFunction8() {
+function myCandy8() {
     var item8 = document.getElementById('item8');
     item8.innerHTML = 'Orange Juice';
 }
 
-function myFunction9() {
+
+
+//Cereal.html Page//
+function myCandy9() {
     var item9 = document.getElementById('item9');
     item9.innerHTML = 'Cheerios';
 }
 
-function myFunction10() {
+function myCandy10() {
     var item10 = document.getElementById('item10');
-    item10.innerHTML = 'Capitan Crunch';
+    item10.innerHTML = 'Crunch';
 }
 
-function myFunction11() {
+function myCandy11() {
     var item11 = document.getElementById('item11');
     item11.innerHTML = 'Raisin Bran';
 }
 
-function myFunction12() {
+function myCandy12() {
     var item12 = document.getElementById('item12');
     item12.innerHTML = 'Puffs';
 }
