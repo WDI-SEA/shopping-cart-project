@@ -1,1 +1,129 @@
+body {
+    font-family: 'Lato', sans-serif;
+    padding: none;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap justify-content: space-around;
+    align-items: flex-start;
+    align-content: space-around;
+}
 
+section {
+    align-items: flex-start;
+}
+
+header {
+    margin: 0;
+    padding-top: 1em;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+div {
+    text-align: center;
+}
+
+
+}
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5em;
+}
+ul {
+    justify-content: space-around;
+}
+li {
+    display: flex;
+    display: inline;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+a {
+    color: blue;
+}
+.item {
+    width: 90%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+    border: black, 2px;
+}
+.item-image {
+    width: 50%;
+    height: auto;
+    .flex {
+        display: flex;
+        display: inline-block;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .categories {
+        background-color: white;
+    }
+    
+    .shoppingcart {
+        text-align: center;
+        background-color: lightgrey;
+        height: auto;
+        height: 800px;
+        align-items: flex-start;
+    }
+    
+    .shoppingcart-ul {}
+    
+    #shoppingcart-li {
+        color: red;
+        font-size-adjust: inherit;
+        display: inline;
+    }
+    
+    .hidden {
+        display: none !important;
+    }
+    
+    #category-nav {
+        padding: 1em;
+        display: inline-block;
+        width: 90%;
+    }
+}
+#cereal-products {}
+#juice-products {}
+#candy-products {}
+.col-1-3 {
+    width: 33%;
+    justify-content: space-between;
+}
+.col-2-3 {
+    width: 66%;
+}
+.col-3-3 {
+    width: 100%;
+    /*@media screen and (max-width: 600px) {
+        #shopingcart section {
+            display: none;
+        }
+        
+        .shoppingcartIcon {
+            display: block;
+        }*/
+}
+
+/*form {
+	border: 2px solid lightgrey;
+	color: white;
+	background-color: black;
+	addEventListener("click" button/field background-color blue)
+}
+.error {
+	border: 2px solid red;
+}
+*/
