@@ -27,7 +27,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 img {
@@ -61,6 +61,11 @@ nav h1 {
     width: 50%;
 }
 
+p {
+    margin-top: .5em;
+    padding: .3em 1em;
+}
+
 #shoppingCart {
     background-color: #dcdcdc;
     width: 50%;
@@ -75,3 +80,14 @@ nav h1 {
     margin: .5em;
     /*    padding: 2em auto .5em;*/
 }
+
+ul {
+    text-align: center;
+    color: #red;
+    font-size: 1em;
+    font-weight: 400;
+    margin: .5em;
+    display: block;
+}
+
+//end
