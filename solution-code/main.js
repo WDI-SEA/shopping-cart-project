@@ -73,8 +73,8 @@ function clickOnItem() {
     var dogTrait = this.id;
     var dogPart = this.dataset.cat;
     dog[dogPart] = dogTrait;
-    //r
 
+    // time to display the cart
     createCartList(dog);
 }
 
@@ -127,7 +127,7 @@ function onLoad() {
     }
 
     // adds "click on item" event to each dog trait available
-    var allDogTraits = document.querySelectorAll("article");
+    var allDogTraits = document.querySelectorAll(".store-container div");
     for (var k = 0; k < allDogTraits.length; k++) {
         allDogTraits[k].addEventListener("click", clickOnItem);
     }
