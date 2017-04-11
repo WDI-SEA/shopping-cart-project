@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Shoping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div id="products">
+        <nav>
+            <h1>Quality Stuff</h1>
+            <ul id="navCategories">
+                <li id="cerealButt">Cereal</li>
+                <li id="litButt">Literature</li>
+                <li id="soupButt">Soup</li>
+            </ul>
+        </nav>
+        <div id="items" class="flex">
+            <!--Cereal-->
+            <div id="cerealId">
+                <div class="box">
+                    <img src="images/cereal/cornfrost.jpeg" alt="Cornfrost">
+                    <p>Cornfrost</p>
+                </div>
+                <div class="box">
+                    <img src="images/cereal/frankenberry.jpeg" alt="Frankenberry">
+                    <p>Frankenberry</p>
+                </div>
+                <div class="box">
+                    <img src="images/cereal/kaboom.jpeg" alt="Kaboom">
+                    <p>Kaboom</p>
+                </div>
+                <div class="box">
+                    <img src="images/cereal/mrT.jpeg" alt="Mr. T">
+                    <p>Mr. T</p>
+                </div>
+                <div class="box">
+                    <img src="images/cereal/smurf.jpeg" alt="Smurf">
+                    <p>Smurf</p>
+                </div>
+            </div>
+            <!--Lit-->
+            <div id="literatureId" class="hidden">
+                <div class="box">
+                    <img src="images/literature/inTouch.jpeg" alt="inTouch">
+                    <p>inTouch</p>
+                </div>
+                <div class="box">
+                    <img src="images/literature/ok.jpeg" alt="OK">
+                    <p>OK</p>
+                </div>
+                <div class="box">
+                    <img src="images/literature/rick.jpeg" alt="Ranger Rick">
+                    <p>Ranger Rick</p>
+                </div>
+                <div class="box">
+                    <img src="images/literature/star.jpeg" alt="Star">
+                    <p>Star</p>
+                </div>
+                <div class="box">
+                    <img src="images/literature/us.jpeg" alt="Us Weekly">
+                    <p>Us Weekly</p>
+                </div>
+            </div>
+            <!--Soup-->
+            <div id="soupId" class="hidden">
+                <div class="box">
+                    <img src="images/soup/cheese.jpeg" alt="Cheese">
+                    <p>Cheese</p>
+                </div>
+                <div class="box">
+                    <img src="images/soup/chicken.jpeg" alt="Chicken">
+                    <p>Chicken</p>
+                </div>
+                <div class="box">
+                    <img src="images/soup/pepper.jpeg" alt="Pepper">
+                    <p>Pepper</p>
+                </div>
+                <div class="box">
+                    <img src="images/soup/tomato.jpeg" alt="Tomato">
+                    <p>Tomato</p>
+                </div>
+                <div class="box">
+                    <img src="images/soup/vegetable.jpeg" alt="Vegetable">
+                    <p>Vegetable</p>
+                </div>
+            </div>
+            <!--End Soup-->
+        </div>
+    </div>
+    <!--Categories-->
+    <!--Shopping Cart-->
+    <div id="shoppingCart">
+        <h1>Shopping Cart</h1>
+        <ul id="cart">
+        </ul>
+    </div>
+</body>
+
+</html>
