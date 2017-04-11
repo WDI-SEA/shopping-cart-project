@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function onPageLoad() {
     // is "DOMContentLoaded" an updated "document.onload"?
     //document.onload = function () {myScript}
 
@@ -24,20 +24,20 @@ document.addEventListener("DOMContentLoaded", function() {
     cerealLi.addEventListener("click", function() {
         console.log("click" + this.innerText);
         juiceLi.classList.add("hidden");
-        candyLi.classList.add("hidden")
+        candyLi.classList.add("hidden");
     });
 
     juiceLi.addEventListener("click", function() {
         console.log("click" + this.innerText);
         cerealLi.classList.add("hidden");
-        candyLi.classList.add("hidden")
+        candyLi.classList.add("hidden");
     });
 
 
     candyLi.addEventListener("click", function() {
         console.log("click" + this.innerText);
         juiceLi.classList.add("hidden");
-        cerealLi.classList.add("hidden")
+        cerealLi.classList.add("hidden");
     });
 
 
@@ -53,13 +53,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    var divItemToShoppingcart = document.getAllElementsByClassName(".item");
-    var items = querySelectorAll(".item");
-    items[0].addEventListener("click", function() {
-        for (var i = 0; i < items.length; 1++) {
-            console.log("items click.");
-        }
-    });
+    var divs = document.getElementsByClassName("item");
+    var shoppingcartLi = document.createElement("li");
+
+    shoppingcartLi.innerText = (this);
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("click", onProductClick);
+
+        divs[i].appendChild(shoppingcartLi);
+    }
+
+
+    // var divItemToShoppingcart = document.getAllElementsByClassName(".item");
+    // var items = querySelectorAll(".item");
+    // items[0].addEventListener("click", function() {
+    //     for (var i = 0; i < items.length; 1++) {
+    //         console.log("items click.");
+    //     }
+    // });
+
 
 
     //     document.querySelectorAll('div').addEventListener('click'), add
@@ -100,13 +112,12 @@ document.addEventListener("DOMContentLoaded", function() {
     //             this.remove();
 
     //         });
+}
 
-
-
-
-
-
-})
+function onProductClick() {
+    console.log(this.innerText);
+}
+document.addEventListener("DOMContentLoaded", onPageLoad);
 
 //addEventListen 2px border around each div .item on mouseover
 
