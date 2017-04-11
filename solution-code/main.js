@@ -16,6 +16,7 @@ function hideSubCategories() {
     this.children[1].classList.add("subcat-hidden");
 }
 
+
 // grabs id of currently clicked menu category to grab corresponding collection of items
 // then checks if something is currently displayed
 // if not, simply display current category
@@ -40,30 +41,41 @@ function toggleItemsInCategory() {
     }
 }
 
-// determines which category of items you clicked on and which trait you clicked on
-// then if it hasn't been set, creates new element
-// if it has been set, simply updates current list item with new text
-// after all that, property is added to the dog object
-function clickOnItem() {
-    var dogTrait = this.id;
-    var dogPart = this.dataset.cat;
-    var currentCartList = document.querySelectorAll("#cart-items li");
-    var newInnerText = dogTrait + " " + dogPart;
 
-    if (!dog.hasOwnProperty(`${dogPart}`)) {
-        var newDogTraitInCart = document.createElement("li");
-        newDogTraitInCart.innerText = newInnerText;
-        var cartDisplay = document.getElementById("cart-items");
-        cartDisplay.appendChild(newDogTraitInCart);
-    } else {
-        for (var i = 0; i < currentCartList.length; i++) {
-            if (currentCartList[i].innerText.includes(dogPart)) {
-                currentCartList[i].innerText = newInnerText;
+function createCartList(dog) {
+    // grabs existing list
+    var emptyCartList = document.querySelector("#cart-items");
+
+    // goes through each part of the dog
+    var each;
+    for (each in dog) {
+        if (dog.hasOwnProperty(each)) {
+            // grabs li element for current body part
+            var existingPart = document.querySelector(`[data-category=${each}`);
+
+            // if there isn't a body part yet, a list item will be created
+            if (!existingPart) {
+                var newLi = document.createElement("li");
+                newLi.setAttribute("data-category", each);
+                newLi.innerText = dog[each] + " " + each;
+                emptyCartList.appendChild(newLi);
+                // if there is a trait assigned to that body part, then the text will be updated
+            } else {
+                existingPart.innerText = dog[each] + " " + each;
             }
         }
     }
+}
+// determines which category of items you clicked on and which trait you clicked on
+// updates dog with that body part and trait
+// calls function to generate the list
+function clickOnItem() {
+    var dogTrait = this.id;
+    var dogPart = this.dataset.cat;
+    dog[dogPart] = dogTrait;
+    //r
 
-    dog[`${dogPart}`] = dogTrait;
+    createCartList(dog);
 }
 
 // sees if any of the body parts defined are missing from the created dog
@@ -81,7 +93,8 @@ function checkForAllDogParts(dog, dogParts) {
 // also saves dog cart to localStorage
 function clickToPurchase() {
     var message = document.querySelector(".cart p");
-    var cart = document.querySelector(".cart");
+    //  did not use but may be useful later
+    // var cart = document.querySelector(".cart");
     var innerText = "";
 
     if (!checkForAllDogParts(dog, allDogPartsIds)) {
@@ -109,14 +122,14 @@ function onLoad() {
     }
 
     // grabs all body parts as text (using ID) for later use
-    for (var i = 0; i < allSubcategories.length; i++) {
-        allDogPartsIds.push(allSubcategories[i].id);
+    for (var j = 0; j < allSubcategories.length; j++) {
+        allDogPartsIds.push(allSubcategories[j].id);
     }
 
     // adds "click on item" event to each dog trait available
     var allDogTraits = document.querySelectorAll("article");
-    for (var i = 0; i < allDogTraits.length; i++) {
-        allDogTraits[i].addEventListener("click", clickOnItem);
+    for (var k = 0; k < allDogTraits.length; k++) {
+        allDogTraits[k].addEventListener("click", clickOnItem);
     }
 
     var submitButton = document.getElementById("buy-dog");
