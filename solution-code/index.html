@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Till You Drop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <script src="jquery-1.7.1.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>An Exciting Store</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="cerOpt"> <a href="#">Cereal </a></li>
+            <li id="juOpt"><a href="#">Juice</a></li>
+            <li id="caOpt"><a href="#">Candy</a></li>
+        </ul>
+    </nav>
+    <!-- categories-->
+    <div class="floatBody">
+        <main>
+            <div id="cerealCat" class="cerCategory  hidden">
+                <div class="box cerealBox1">
+                    <h3> Cheerios</h3>
+                </div>
+                <div class="box cerealBox2">
+                    <h3>Crunch</h3></div>
+                <div class="box cerealBox3">
+                    <h3>Fruit Loops</h3></div>
+                <div class="box cerealBox4">
+                    <h3>Puffs</h3></div>
+            </div>
+            <div id="juiceCat" class="juiceCategory  hidden">
+                <div class="box juiceBox1">
+                    <h3>Apple Juice</h3></div>
+                <div class="box juiceBox2">
+                    <h3>Carrot Juice</h3></div>
+                <div class="box juiceBox3">
+                    <h3>Tomato Juice</h3></div>
+                <div class="box juiceBox4">
+                    <h3>Grape Juice</h3></div>
+            </div>
+            <div id="candyCat" class="candyCategory  hidden">
+                <div class="box candyBox1">
+                    <h3>Kit Kat</h3></div>
+                <div class="box candyBox2">
+                    <h3>M&M's</h3></div>
+                <div class="box candyBox3">
+                    <h3>Skittles</h3></div>
+                <div class="box candyBox4">
+                    <h3>Twix</h3></div>
+            </div>
+        </main>
+        <!-- populates with clicked items -->
+        <section>
+            <div class="titleWrap">
+                <h2>Shopping Cart</h2></div>
+            <div id="shopBox">
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

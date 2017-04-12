@@ -1,1 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(232, 232, 238);
+}
 
+header {
+    background-color: black;
+    background-size: cover;
+    position: relative;
+    z-index: 99;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-size: 5em;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    background-color: rgba(128, 128, 128, .5);
+}
+
+li a {
+    margin: 0 auto;
+    padding: 1.1em;
+    font-family: Helvetica;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10%;
+    padding: 2em;
+}
+
+ul {
+    justify-content: space-around;
+    text-decoration: none;
+    padding: 1em;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+}
+
+.floatBody {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    border-radius: 10%
+}
+
+main {
+    width: 47.5%;
+    padding: 1em;
+    flex-wrap: wrap;
+    height: 50em;
+}
+
+.box {
+    height: 10em;
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 0;
+    border-radius: 30%;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+h3 {
+    color: white;
+    font-family: FreeSans;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 0;
+    display: block;
+    background-color: rgba(128, 128, 128, .5);
+    width: 100%;
+}
+
+h2 {
+    font-family: FreeSans;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+}
+
+.titleWrap {
+    border: 1px solid rgb(105, 105, 105);
+    padding: 0;
+    height: 3.2em;
+    justify-content: center;
+    background-color: darkgrey;
+}
+
+.row {
+    flex-wrap: wrap;
+}
+
+.cerealBox1 {
+    background-image: url("images/cereal/cheerios.jpg");
+    background-size: cover;
+    flex-wrap: wrap;
+    margin: .5em 0;
+}
+
+.cerealBox2 {
+    background-image: url("images/cereal/crunch.jpg");
+    background-size: cover;
+    margin: .5em 0;
+}
+
+.cerealBox3 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/cereal/fruit-loops.jpg");
+}
+
+.cerealBox4 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/cereal/puffs.jpg");
+}
+
+.juiceBox1 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/juice/apple-juice.jpg");
+}
+
+.juiceBox2 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/juice/carrot-juice.jpg");
+}
+
+.juiceBox3 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/juice/tomato-juice.jpg");
+}
+
+.juiceBox4 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/juice/grape-juice.jpeg");
+}
+
+.candyBox1 {
+    margin: .5em 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/candy/kit-kat.jpg");
+}
+
+.candyBox2 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/candy/m&ms.jpg");
+}
+
+.candyBox3 {
+    margin: .5em 0;
+    background-size: cover;
+    background-image: url("images/candy/skittles.jpg");
+}
+
+.candyBox4 {
+    margin: .5em 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/candy/twix.jpg");
+}
+
+section {
+    margin: -3.3em 0;
+    padding: 0;
+    width: 48.5%;
+    background-color: rgb(220, 220, 220);
+    border: 1px solid;
+}
+
+#shopBox {
+    margin: 0 auto;
+    padding: 0 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.hidden {
+    display: none;
+}
